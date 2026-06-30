@@ -1,5 +1,6 @@
 import streamlit as st
 import json, os, copy, base64
+import pandas as pd
 import formulas
 import plotly.graph_objects as go
 import openpyxl
@@ -18,7 +19,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 0.02,
   "major": "A) Absatzplanung Copy Classic – Markt 1",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "1 Absatzplanung",
@@ -27,7 +29,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 43000,
   "major": "A) Absatzplanung Copy Classic – Markt 1",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "1 Absatzplanung",
@@ -36,7 +39,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 0.2,
   "major": "A) Absatzplanung Copy Classic – Markt 1",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "1 Absatzplanung",
@@ -45,7 +49,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 3000,
   "major": "A) Absatzplanung Copy Classic – Markt 1",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "2 Finanzen",
@@ -54,7 +59,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 129,
   "major": "A) Gewinn- und Verlustrechnung (GuV)",
-  "sub": "Gesamtkostenverfahren"
+  "sub": "Gesamtkostenverfahren",
+  "siblings": [
+   {
+    "cell": "C7",
+    "label": "% vom Umsatz"
+   }
+  ]
  },
  {
   "sheet": "2 Finanzen",
@@ -63,7 +74,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 0,
   "major": "A) Gewinn- und Verlustrechnung (GuV)",
-  "sub": "Gesamtkostenverfahren"
+  "sub": "Gesamtkostenverfahren",
+  "siblings": [
+   {
+    "cell": "C8",
+    "label": "% vom Umsatz"
+   }
+  ]
  },
  {
   "sheet": "2 Finanzen",
@@ -72,7 +89,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 7.15,
   "major": "A) Gewinn- und Verlustrechnung (GuV)",
-  "sub": "Gesamtkostenverfahren"
+  "sub": "Gesamtkostenverfahren",
+  "siblings": [
+   {
+    "cell": "C16",
+    "label": "% vom Umsatz"
+   }
+  ]
  },
  {
   "sheet": "2 Finanzen",
@@ -81,7 +104,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 0,
   "major": "A) Gewinn- und Verlustrechnung (GuV)",
-  "sub": "Periodenüberschuss / -fehlbetrag"
+  "sub": "Periodenüberschuss / -fehlbetrag",
+  "siblings": []
  },
  {
   "sheet": "2 Finanzen",
@@ -90,7 +114,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 3.5,
   "major": "A) Gewinn- und Verlustrechnung (GuV)",
-  "sub": "Periodenüberschuss / -fehlbetrag"
+  "sub": "Periodenüberschuss / -fehlbetrag",
+  "siblings": [
+   {
+    "cell": "C39",
+    "label": "% vom Umsatz"
+   }
+  ]
  },
  {
   "sheet": "2 Finanzen",
@@ -99,7 +129,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 3,
   "major": "A) Gewinn- und Verlustrechnung (GuV)",
-  "sub": "Ergebnisverwendung"
+  "sub": "Ergebnisverwendung",
+  "siblings": []
  },
  {
   "sheet": "2 Finanzen",
@@ -108,7 +139,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 1,
   "major": "A) Gewinn- und Verlustrechnung (GuV)",
-  "sub": "Ergebnisverwendung"
+  "sub": "Ergebnisverwendung",
+  "siblings": []
  },
  {
   "sheet": "2 Finanzen",
@@ -117,7 +149,17 @@ _INPUTS_META_JSON = r'''[
   "col_label": "Großabnehmer",
   "value": 0,
   "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "B54",
+    "label": "Markt 1"
+   },
+   {
+    "cell": "G54",
+    "label": "Summe"
+   }
+  ]
  },
  {
   "sheet": "2 Finanzen",
@@ -126,7 +168,17 @@ _INPUTS_META_JSON = r'''[
   "col_label": "Ausschreibung",
   "value": 0,
   "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "B54",
+    "label": "Markt 1"
+   },
+   {
+    "cell": "G54",
+    "label": "Summe"
+   }
+  ]
  },
  {
   "sheet": "2 Finanzen",
@@ -135,7 +187,17 @@ _INPUTS_META_JSON = r'''[
   "col_label": "Markt 2",
   "value": 0,
   "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "B54",
+    "label": "Markt 1"
+   },
+   {
+    "cell": "G54",
+    "label": "Summe"
+   }
+  ]
  },
  {
   "sheet": "2 Finanzen",
@@ -144,7 +206,17 @@ _INPUTS_META_JSON = r'''[
   "col_label": "Sondermarkt",
   "value": 0,
   "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "B54",
+    "label": "Markt 1"
+   },
+   {
+    "cell": "G54",
+    "label": "Summe"
+   }
+  ]
  },
  {
   "sheet": "2 Finanzen",
@@ -153,7 +225,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 24.75,
   "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "G55",
+    "label": "Summe"
+   }
+  ]
  },
  {
   "sheet": "2 Finanzen",
@@ -162,7 +240,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": "Großabnehmer",
   "value": 0,
   "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "G55",
+    "label": "Summe"
+   }
+  ]
  },
  {
   "sheet": "2 Finanzen",
@@ -171,7 +255,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": "Ausschreibung",
   "value": 0,
   "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "G55",
+    "label": "Summe"
+   }
+  ]
  },
  {
   "sheet": "2 Finanzen",
@@ -180,7 +270,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": "Markt 2",
   "value": 0,
   "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "G55",
+    "label": "Summe"
+   }
+  ]
  },
  {
   "sheet": "2 Finanzen",
@@ -189,7 +285,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": "Sondermarkt",
   "value": 0,
   "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "G55",
+    "label": "Summe"
+   }
+  ]
  },
  {
   "sheet": "2 Finanzen",
@@ -198,7 +300,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 38.61,
   "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "G56",
+    "label": "Summe"
+   }
+  ]
  },
  {
   "sheet": "2 Finanzen",
@@ -207,7 +315,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": "Großabnehmer",
   "value": 0,
   "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "G56",
+    "label": "Summe"
+   }
+  ]
  },
  {
   "sheet": "2 Finanzen",
@@ -216,7 +330,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": "Ausschreibung",
   "value": 0,
   "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "G56",
+    "label": "Summe"
+   }
+  ]
  },
  {
   "sheet": "2 Finanzen",
@@ -225,7 +345,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": "Markt 2",
   "value": 0,
   "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "G56",
+    "label": "Summe"
+   }
+  ]
  },
  {
   "sheet": "2 Finanzen",
@@ -234,7 +360,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": "Sondermarkt",
   "value": 0,
   "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "G56",
+    "label": "Summe"
+   }
+  ]
  },
  {
   "sheet": "2 Finanzen",
@@ -243,7 +375,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 1.08,
   "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "G57",
+    "label": "Summe"
+   }
+  ]
  },
  {
   "sheet": "2 Finanzen",
@@ -252,7 +390,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": "Großabnehmer",
   "value": 0,
   "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "G57",
+    "label": "Summe"
+   }
+  ]
  },
  {
   "sheet": "2 Finanzen",
@@ -261,7 +405,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": "Ausschreibung",
   "value": 0,
   "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "G57",
+    "label": "Summe"
+   }
+  ]
  },
  {
   "sheet": "2 Finanzen",
@@ -270,7 +420,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": "Markt 2",
   "value": 0,
   "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "G57",
+    "label": "Summe"
+   }
+  ]
  },
  {
   "sheet": "2 Finanzen",
@@ -279,7 +435,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": "Sondermarkt",
   "value": 0,
   "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "G57",
+    "label": "Summe"
+   }
+  ]
  },
  {
   "sheet": "2 Finanzen",
@@ -288,7 +450,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 1.67,
   "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "G59",
+    "label": "Summe"
+   }
+  ]
  },
  {
   "sheet": "2 Finanzen",
@@ -297,7 +465,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": "Großabnehmer",
   "value": 0,
   "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "G59",
+    "label": "Summe"
+   }
+  ]
  },
  {
   "sheet": "2 Finanzen",
@@ -306,7 +480,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": "Ausschreibung",
   "value": 0,
   "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "G59",
+    "label": "Summe"
+   }
+  ]
  },
  {
   "sheet": "2 Finanzen",
@@ -315,7 +495,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": "Markt 2",
   "value": 0,
   "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "G59",
+    "label": "Summe"
+   }
+  ]
  },
  {
   "sheet": "2 Finanzen",
@@ -324,7 +510,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": "Sondermarkt",
   "value": 0,
   "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "G59",
+    "label": "Summe"
+   }
+  ]
  },
  {
   "sheet": "2 Finanzen",
@@ -333,7 +525,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 22.99,
   "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "G60",
+    "label": "Summe"
+   }
+  ]
  },
  {
   "sheet": "2 Finanzen",
@@ -342,7 +540,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": "Großabnehmer",
   "value": 0,
   "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "G60",
+    "label": "Summe"
+   }
+  ]
  },
  {
   "sheet": "2 Finanzen",
@@ -351,7 +555,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": "Ausschreibung",
   "value": 0,
   "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "G60",
+    "label": "Summe"
+   }
+  ]
  },
  {
   "sheet": "2 Finanzen",
@@ -360,7 +570,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": "Markt 2",
   "value": 0,
   "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "G60",
+    "label": "Summe"
+   }
+  ]
  },
  {
   "sheet": "2 Finanzen",
@@ -369,7 +585,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": "Sondermarkt",
   "value": 0,
   "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "G60",
+    "label": "Summe"
+   }
+  ]
  },
  {
   "sheet": "2 Finanzen",
@@ -378,7 +600,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 6,
   "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "G62",
+    "label": "Summe"
+   }
+  ]
  },
  {
   "sheet": "2 Finanzen",
@@ -387,7 +615,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": "Großabnehmer",
   "value": 0,
   "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "G62",
+    "label": "Summe"
+   }
+  ]
  },
  {
   "sheet": "2 Finanzen",
@@ -396,7 +630,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": "Ausschreibung",
   "value": 0,
   "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "G62",
+    "label": "Summe"
+   }
+  ]
  },
  {
   "sheet": "2 Finanzen",
@@ -405,7 +645,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": "Markt 2",
   "value": 0,
   "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "G62",
+    "label": "Summe"
+   }
+  ]
  },
  {
   "sheet": "2 Finanzen",
@@ -414,7 +660,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": "Sondermarkt",
   "value": 0,
   "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "G62",
+    "label": "Summe"
+   }
+  ]
  },
  {
   "sheet": "2 Finanzen",
@@ -423,7 +675,17 @@ _INPUTS_META_JSON = r'''[
   "col_label": "Großabnehmer",
   "value": 0,
   "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "B64",
+    "label": "6"
+   },
+   {
+    "cell": "G64",
+    "label": "Summe"
+   }
+  ]
  },
  {
   "sheet": "2 Finanzen",
@@ -432,7 +694,17 @@ _INPUTS_META_JSON = r'''[
   "col_label": "Ausschreibung",
   "value": 0,
   "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "B64",
+    "label": "6"
+   },
+   {
+    "cell": "G64",
+    "label": "Summe"
+   }
+  ]
  },
  {
   "sheet": "2 Finanzen",
@@ -441,7 +713,17 @@ _INPUTS_META_JSON = r'''[
   "col_label": "Markt 2",
   "value": 0,
   "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "B64",
+    "label": "6"
+   },
+   {
+    "cell": "G64",
+    "label": "Summe"
+   }
+  ]
  },
  {
   "sheet": "2 Finanzen",
@@ -450,7 +732,17 @@ _INPUTS_META_JSON = r'''[
   "col_label": "Sondermarkt",
   "value": 0,
   "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "B64",
+    "label": "6"
+   },
+   {
+    "cell": "G64",
+    "label": "Summe"
+   }
+  ]
  },
  {
   "sheet": "2 Finanzen",
@@ -459,7 +751,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 3000,
   "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
-  "sub": "Deckungsbeitragsrechnung pro Stück (EUR, Markt 1 / Durchschnitt)"
+  "sub": "Deckungsbeitragsrechnung pro Stück (EUR, Markt 1 / Durchschnitt)",
+  "siblings": []
  },
  {
   "sheet": "2 Finanzen",
@@ -468,7 +761,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 575.56,
   "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
-  "sub": "Deckungsbeitragsrechnung pro Stück (EUR, Markt 1 / Durchschnitt)"
+  "sub": "Deckungsbeitragsrechnung pro Stück (EUR, Markt 1 / Durchschnitt)",
+  "siblings": []
  },
  {
   "sheet": "2 Finanzen",
@@ -477,7 +771,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 897.81,
   "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
-  "sub": "Deckungsbeitragsrechnung pro Stück (EUR, Markt 1 / Durchschnitt)"
+  "sub": "Deckungsbeitragsrechnung pro Stück (EUR, Markt 1 / Durchschnitt)",
+  "siblings": []
  },
  {
   "sheet": "2 Finanzen",
@@ -486,7 +781,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 25,
   "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
-  "sub": "Deckungsbeitragsrechnung pro Stück (EUR, Markt 1 / Durchschnitt)"
+  "sub": "Deckungsbeitragsrechnung pro Stück (EUR, Markt 1 / Durchschnitt)",
+  "siblings": []
  },
  {
   "sheet": "2 Finanzen",
@@ -495,7 +791,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 230.98,
   "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
-  "sub": "Deckungsbeitragsrechnung pro Stück (EUR, Markt 1 / Durchschnitt)"
+  "sub": "Deckungsbeitragsrechnung pro Stück (EUR, Markt 1 / Durchschnitt)",
+  "siblings": []
  },
  {
   "sheet": "2 Finanzen",
@@ -504,7 +801,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 23.09,
   "major": "C) Kostenträgerrechnung – Copy Classic",
-  "sub": "Gesamt (MEUR)"
+  "sub": "Gesamt (MEUR)",
+  "siblings": []
  },
  {
   "sheet": "2 Finanzen",
@@ -513,7 +811,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 1.56,
   "major": "C) Kostenträgerrechnung – Copy Classic",
-  "sub": "Gesamt (MEUR)"
+  "sub": "Gesamt (MEUR)",
+  "siblings": []
  },
  {
   "sheet": "2 Finanzen",
@@ -522,7 +821,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 36.01,
   "major": "C) Kostenträgerrechnung – Copy Classic",
-  "sub": "Gesamt (MEUR)"
+  "sub": "Gesamt (MEUR)",
+  "siblings": []
  },
  {
   "sheet": "2 Finanzen",
@@ -531,7 +831,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 21.43,
   "major": "C) Kostenträgerrechnung – Copy Classic",
-  "sub": "Gesamt (MEUR)"
+  "sub": "Gesamt (MEUR)",
+  "siblings": []
  },
  {
   "sheet": "2 Finanzen",
@@ -540,7 +841,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 5.93,
   "major": "C) Kostenträgerrechnung – Copy Classic",
-  "sub": "Gesamt (MEUR)"
+  "sub": "Gesamt (MEUR)",
+  "siblings": []
  },
  {
   "sheet": "2 Finanzen",
@@ -549,7 +851,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 3.5,
   "major": "C) Kostenträgerrechnung – Copy Classic",
-  "sub": "Gesamt (MEUR)"
+  "sub": "Gesamt (MEUR)",
+  "siblings": []
  },
  {
   "sheet": "2 Finanzen",
@@ -558,7 +861,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 2.27,
   "major": "C) Kostenträgerrechnung – Copy Classic",
-  "sub": "Gesamt (MEUR)"
+  "sub": "Gesamt (MEUR)",
+  "siblings": []
  },
  {
   "sheet": "2 Finanzen",
@@ -567,7 +871,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 8.53,
   "major": "C) Kostenträgerrechnung – Copy Classic",
-  "sub": "Gesamt (MEUR)"
+  "sub": "Gesamt (MEUR)",
+  "siblings": []
  },
  {
   "sheet": "2 Finanzen",
@@ -576,7 +881,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 0,
   "major": "C) Kostenträgerrechnung – Copy Classic",
-  "sub": "Gesamt (MEUR)"
+  "sub": "Gesamt (MEUR)",
+  "siblings": []
  },
  {
   "sheet": "2 Finanzen",
@@ -585,7 +891,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 9.68,
   "major": "C) Kostenträgerrechnung – Copy Classic",
-  "sub": "Gesamt (MEUR)"
+  "sub": "Gesamt (MEUR)",
+  "siblings": []
  },
  {
   "sheet": "2 Finanzen",
@@ -594,7 +901,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 0.5,
   "major": "D) Liquiditätsrechnung",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "2 Finanzen",
@@ -603,7 +911,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 103.2,
   "major": "D) Liquiditätsrechnung",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "2 Finanzen",
@@ -612,7 +921,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 17.84,
   "major": "D) Liquiditätsrechnung",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "2 Finanzen",
@@ -621,7 +931,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 0,
   "major": "D) Liquiditätsrechnung",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "2 Finanzen",
@@ -630,7 +941,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 0,
   "major": "D) Liquiditätsrechnung",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "2 Finanzen",
@@ -639,7 +951,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 0,
   "major": "D) Liquiditätsrechnung",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "2 Finanzen",
@@ -648,7 +961,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 0,
   "major": "D) Liquiditätsrechnung",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "2 Finanzen",
@@ -657,7 +971,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 0,
   "major": "D) Liquiditätsrechnung",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "2 Finanzen",
@@ -666,7 +981,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 0,
   "major": "D) Liquiditätsrechnung",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "2 Finanzen",
@@ -675,7 +991,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 18.5,
   "major": "D) Liquiditätsrechnung",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "2 Finanzen",
@@ -684,7 +1001,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 0,
   "major": "D) Liquiditätsrechnung",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "2 Finanzen",
@@ -693,7 +1011,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 26.75,
   "major": "D) Liquiditätsrechnung",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "2 Finanzen",
@@ -702,7 +1021,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 40,
   "major": "D) Liquiditätsrechnung",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "2 Finanzen",
@@ -711,7 +1031,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 0,
   "major": "D) Liquiditätsrechnung",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "2 Finanzen",
@@ -720,7 +1041,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 0,
   "major": "D) Liquiditätsrechnung",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "2 Finanzen",
@@ -729,7 +1051,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 1.5,
   "major": "D) Liquiditätsrechnung",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "2 Finanzen",
@@ -738,7 +1061,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 0,
   "major": "D) Liquiditätsrechnung",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "2 Finanzen",
@@ -747,7 +1071,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 0,
   "major": "D) Liquiditätsrechnung",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "3 Fertigung",
@@ -756,7 +1081,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": -8,
   "major": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "3 Fertigung",
@@ -765,7 +1091,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": "Beschaffungswert (MEUR)",
   "value": 12.5,
   "major": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "3 Fertigung",
@@ -774,7 +1101,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": "Restlaufzeit (Perioden)",
   "value": 1,
   "major": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "3 Fertigung",
@@ -783,7 +1111,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": "Abschreibung (MEUR/Per.)",
   "value": 1.25,
   "major": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "3 Fertigung",
@@ -792,7 +1121,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": "Restbuchwert (MEUR)",
   "value": 1.25,
   "major": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "3 Fertigung",
@@ -801,7 +1131,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": "Sonst. Fixkosten (MEUR)",
   "value": 1.5,
   "major": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "3 Fertigung",
@@ -810,7 +1141,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": "Umweltindex",
   "value": 83,
   "major": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "3 Fertigung",
@@ -819,7 +1151,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": -7,
   "major": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "3 Fertigung",
@@ -828,7 +1161,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": 12.5,
   "value": 15,
   "major": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "3 Fertigung",
@@ -837,7 +1171,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": 1,
   "value": 2,
   "major": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "3 Fertigung",
@@ -846,7 +1181,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": 1.25,
   "value": 1.5,
   "major": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "3 Fertigung",
@@ -855,7 +1191,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": 1.25,
   "value": 3,
   "major": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "3 Fertigung",
@@ -864,7 +1201,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": 1.5,
   "value": 1,
   "major": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "3 Fertigung",
@@ -873,7 +1211,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": 83,
   "value": 90,
   "major": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "3 Fertigung",
@@ -882,7 +1221,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": -6,
   "major": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "3 Fertigung",
@@ -891,7 +1231,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": 15,
   "value": 20,
   "major": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "3 Fertigung",
@@ -900,7 +1241,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": 2,
   "value": 3,
   "major": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "3 Fertigung",
@@ -909,7 +1251,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": 1.5,
   "value": 2,
   "major": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "3 Fertigung",
@@ -918,7 +1261,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": 3,
   "value": 6,
   "major": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "3 Fertigung",
@@ -927,7 +1271,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": 1,
   "value": 0.5,
   "major": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "3 Fertigung",
@@ -936,7 +1281,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": 90,
   "value": 95,
   "major": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "3 Fertigung",
@@ -945,7 +1291,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": -5,
   "major": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "3 Fertigung",
@@ -954,7 +1301,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": 20,
   "value": 20,
   "major": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "3 Fertigung",
@@ -963,7 +1311,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": 3,
   "value": 4,
   "major": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "3 Fertigung",
@@ -972,7 +1321,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": 2,
   "value": 2,
   "major": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "3 Fertigung",
@@ -981,7 +1331,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": 6,
   "value": 8,
   "major": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "3 Fertigung",
@@ -990,7 +1341,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": 0.5,
   "value": 0.25,
   "major": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "3 Fertigung",
@@ -999,7 +1351,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": 95,
   "value": 98,
   "major": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "3 Fertigung",
@@ -1008,7 +1361,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 8000,
   "major": "B) Kapazität & Umweltindex der Anlagen",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "F14",
+    "label": "Verfügbare Kapazität (Stück)"
+   }
+  ]
  },
  {
   "sheet": "3 Fertigung",
@@ -1017,7 +1376,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": "Instandhaltung (MEUR)",
   "value": 1.5,
   "major": "B) Kapazität & Umweltindex der Anlagen",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "F14",
+    "label": "Verfügbare Kapazität (Stück)"
+   }
+  ]
  },
  {
   "sheet": "3 Fertigung",
@@ -1026,7 +1391,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": "Verfügbarkeitsgrad (Faktor)",
   "value": 0.97,
   "major": "B) Kapazität & Umweltindex der Anlagen",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "F14",
+    "label": "Verfügbare Kapazität (Stück)"
+   }
+  ]
  },
  {
   "sheet": "3 Fertigung",
@@ -1035,7 +1406,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": "Rationalisierung (Faktor)",
   "value": 1,
   "major": "B) Kapazität & Umweltindex der Anlagen",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "F14",
+    "label": "Verfügbare Kapazität (Stück)"
+   }
+  ]
  },
  {
   "sheet": "3 Fertigung",
@@ -1044,7 +1421,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 9000,
   "major": "B) Kapazität & Umweltindex der Anlagen",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "F15",
+    "label": "Verfügbare Kapazität (Stück)"
+   }
+  ]
  },
  {
   "sheet": "3 Fertigung",
@@ -1053,7 +1436,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": 1.5,
   "value": 1.5,
   "major": "B) Kapazität & Umweltindex der Anlagen",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "F15",
+    "label": "Verfügbare Kapazität (Stück)"
+   }
+  ]
  },
  {
   "sheet": "3 Fertigung",
@@ -1062,7 +1451,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": 0.97,
   "value": 0.97,
   "major": "B) Kapazität & Umweltindex der Anlagen",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "F15",
+    "label": "Verfügbare Kapazität (Stück)"
+   }
+  ]
  },
  {
   "sheet": "3 Fertigung",
@@ -1071,7 +1466,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": 1,
   "value": 1,
   "major": "B) Kapazität & Umweltindex der Anlagen",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "F15",
+    "label": "Verfügbare Kapazität (Stück)"
+   }
+  ]
  },
  {
   "sheet": "3 Fertigung",
@@ -1080,7 +1481,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 11500,
   "major": "B) Kapazität & Umweltindex der Anlagen",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "F16",
+    "label": "Verfügbare Kapazität (Stück)"
+   }
+  ]
  },
  {
   "sheet": "3 Fertigung",
@@ -1089,7 +1496,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": 1.5,
   "value": 1.5,
   "major": "B) Kapazität & Umweltindex der Anlagen",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "F16",
+    "label": "Verfügbare Kapazität (Stück)"
+   }
+  ]
  },
  {
   "sheet": "3 Fertigung",
@@ -1098,7 +1511,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": 0.97,
   "value": 0.97,
   "major": "B) Kapazität & Umweltindex der Anlagen",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "F16",
+    "label": "Verfügbare Kapazität (Stück)"
+   }
+  ]
  },
  {
   "sheet": "3 Fertigung",
@@ -1107,7 +1526,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": 1,
   "value": 1,
   "major": "B) Kapazität & Umweltindex der Anlagen",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "F16",
+    "label": "Verfügbare Kapazität (Stück)"
+   }
+  ]
  },
  {
   "sheet": "3 Fertigung",
@@ -1116,7 +1541,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 13500,
   "major": "B) Kapazität & Umweltindex der Anlagen",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "F17",
+    "label": "Verfügbare Kapazität (Stück)"
+   }
+  ]
  },
  {
   "sheet": "3 Fertigung",
@@ -1125,7 +1556,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": 1.5,
   "value": 1.5,
   "major": "B) Kapazität & Umweltindex der Anlagen",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "F17",
+    "label": "Verfügbare Kapazität (Stück)"
+   }
+  ]
  },
  {
   "sheet": "3 Fertigung",
@@ -1134,7 +1571,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": 0.97,
   "value": 0.97,
   "major": "B) Kapazität & Umweltindex der Anlagen",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "F17",
+    "label": "Verfügbare Kapazität (Stück)"
+   }
+  ]
  },
  {
   "sheet": "3 Fertigung",
@@ -1143,7 +1586,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": 1,
   "value": 1,
   "major": "B) Kapazität & Umweltindex der Anlagen",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "F17",
+    "label": "Verfügbare Kapazität (Stück)"
+   }
+  ]
  },
  {
   "sheet": "3 Fertigung",
@@ -1152,7 +1601,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 93.27,
   "major": "D) Referenz: Umweltindex der Fertigungsanlagen → Abgabe an Umweltbehörde",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "3 Fertigung",
@@ -1161,7 +1611,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 1.35,
   "major": "D) Referenz: Umweltindex der Fertigungsanlagen → Abgabe an Umweltbehörde",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "3 Fertigung",
@@ -1170,7 +1621,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 40000,
   "major": "E) Auslastung Fertigungsanlagen – Copy Classic",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "3 Fertigung",
@@ -1179,7 +1631,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 40000,
   "major": "E) Auslastung Fertigungsanlagen – Copy Classic",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "3 Fertigung",
@@ -1188,7 +1641,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 1,
   "major": "E) Auslastung Fertigungsanlagen – Copy Classic",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "3 Fertigung",
@@ -1197,7 +1651,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 852,
   "major": "F) Fertigungspersonal – Bestand & Fehlzeiten",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "3 Fertigung",
@@ -1206,7 +1661,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 47,
   "major": "F) Fertigungspersonal – Bestand & Fehlzeiten",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "3 Fertigung",
@@ -1215,7 +1671,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 50,
   "major": "G) Produktivität der Fertigungsmitarbeiter",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "3 Fertigung",
@@ -1224,7 +1681,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 0.0586,
   "major": "G) Produktivität der Fertigungsmitarbeiter",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "3 Fertigung",
@@ -1233,7 +1691,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 1000,
   "major": "G) Produktivität der Fertigungsmitarbeiter",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "3 Fertigung",
@@ -1242,7 +1701,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 56.47,
   "major": "G) Produktivität der Fertigungsmitarbeiter",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "3 Fertigung",
@@ -1251,7 +1711,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 0,
   "major": "G) Produktivität der Fertigungsmitarbeiter",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "3 Fertigung",
@@ -1260,7 +1721,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 1,
   "major": "G) Produktivität der Fertigungsmitarbeiter",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "3 Fertigung",
@@ -1269,7 +1731,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 1,
   "major": "G) Produktivität der Fertigungsmitarbeiter",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "3 Fertigung",
@@ -1278,7 +1741,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 1,
   "major": "G) Produktivität der Fertigungsmitarbeiter",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "3 Fertigung",
@@ -1287,7 +1751,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 1,
   "major": "G) Produktivität der Fertigungsmitarbeiter",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "3 Fertigung",
@@ -1296,7 +1761,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 0,
   "major": "G) Produktivität der Fertigungsmitarbeiter",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "3 Fertigung",
@@ -1305,7 +1771,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 1,
   "major": "G) Produktivität der Fertigungsmitarbeiter",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "3 Fertigung",
@@ -1314,7 +1781,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 50.02,
   "major": "H) Auslastung Fertigungsmitarbeiter",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "3 Fertigung",
@@ -1323,7 +1791,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 799.7,
   "major": "H) Auslastung Fertigungsmitarbeiter",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "4 Personal",
@@ -1332,7 +1801,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 18,
   "major": "A) Personalbestand nach Kostenstelle",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "F6",
+    "label": "= Endbestand"
+   }
+  ]
  },
  {
   "sheet": "4 Personal",
@@ -1341,7 +1816,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": "​+ Einstellungen",
   "value": 1,
   "major": "A) Personalbestand nach Kostenstelle",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "F6",
+    "label": "= Endbestand"
+   }
+  ]
  },
  {
   "sheet": "4 Personal",
@@ -1350,7 +1831,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": "​- Entlassungen",
   "value": 0,
   "major": "A) Personalbestand nach Kostenstelle",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "F6",
+    "label": "= Endbestand"
+   }
+  ]
  },
  {
   "sheet": "4 Personal",
@@ -1359,7 +1846,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": "​- Fluktuation",
   "value": 1,
   "major": "A) Personalbestand nach Kostenstelle",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "F6",
+    "label": "= Endbestand"
+   }
+  ]
  },
  {
   "sheet": "4 Personal",
@@ -1368,7 +1861,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 200,
   "major": "A) Personalbestand nach Kostenstelle",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "F7",
+    "label": "= Endbestand"
+   }
+  ]
  },
  {
   "sheet": "4 Personal",
@@ -1377,7 +1876,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": 1,
   "value": 16,
   "major": "A) Personalbestand nach Kostenstelle",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "F7",
+    "label": "= Endbestand"
+   }
+  ]
  },
  {
   "sheet": "4 Personal",
@@ -1386,7 +1891,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": "​- Entlassungen",
   "value": 0,
   "major": "A) Personalbestand nach Kostenstelle",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "F7",
+    "label": "= Endbestand"
+   }
+  ]
  },
  {
   "sheet": "4 Personal",
@@ -1395,7 +1906,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": 1,
   "value": 8,
   "major": "A) Personalbestand nach Kostenstelle",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "F7",
+    "label": "= Endbestand"
+   }
+  ]
  },
  {
   "sheet": "4 Personal",
@@ -1404,7 +1921,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 853,
   "major": "A) Personalbestand nach Kostenstelle",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "F8",
+    "label": "= Endbestand"
+   }
+  ]
  },
  {
   "sheet": "4 Personal",
@@ -1413,7 +1936,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": 16,
   "value": 50,
   "major": "A) Personalbestand nach Kostenstelle",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "F8",
+    "label": "= Endbestand"
+   }
+  ]
  },
  {
   "sheet": "4 Personal",
@@ -1422,7 +1951,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": "​- Entlassungen",
   "value": 0,
   "major": "A) Personalbestand nach Kostenstelle",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "F8",
+    "label": "= Endbestand"
+   }
+  ]
  },
  {
   "sheet": "4 Personal",
@@ -1431,7 +1966,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": 8,
   "value": 51,
   "major": "A) Personalbestand nach Kostenstelle",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "F8",
+    "label": "= Endbestand"
+   }
+  ]
  },
  {
   "sheet": "4 Personal",
@@ -1440,7 +1981,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 34,
   "major": "A) Personalbestand nach Kostenstelle",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "F9",
+    "label": "= Endbestand"
+   }
+  ]
  },
  {
   "sheet": "4 Personal",
@@ -1449,7 +1996,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": 50,
   "value": 2,
   "major": "A) Personalbestand nach Kostenstelle",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "F9",
+    "label": "= Endbestand"
+   }
+  ]
  },
  {
   "sheet": "4 Personal",
@@ -1458,7 +2011,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": "​- Entlassungen",
   "value": 0,
   "major": "A) Personalbestand nach Kostenstelle",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "F9",
+    "label": "= Endbestand"
+   }
+  ]
  },
  {
   "sheet": "4 Personal",
@@ -1467,7 +2026,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": 51,
   "value": 1,
   "major": "A) Personalbestand nach Kostenstelle",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "F9",
+    "label": "= Endbestand"
+   }
+  ]
  },
  {
   "sheet": "4 Personal",
@@ -1476,7 +2041,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 100,
   "major": "A) Personalbestand nach Kostenstelle",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "F10",
+    "label": "= Endbestand"
+   }
+  ]
  },
  {
   "sheet": "4 Personal",
@@ -1485,7 +2056,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": 2,
   "value": 9,
   "major": "A) Personalbestand nach Kostenstelle",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "F10",
+    "label": "= Endbestand"
+   }
+  ]
  },
  {
   "sheet": "4 Personal",
@@ -1494,7 +2071,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": "​- Entlassungen",
   "value": 0,
   "major": "A) Personalbestand nach Kostenstelle",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "F10",
+    "label": "= Endbestand"
+   }
+  ]
  },
  {
   "sheet": "4 Personal",
@@ -1503,7 +2086,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": 1,
   "value": 9,
   "major": "A) Personalbestand nach Kostenstelle",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "F10",
+    "label": "= Endbestand"
+   }
+  ]
  },
  {
   "sheet": "4 Personal",
@@ -1512,7 +2101,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 0.54,
   "major": "B) Personalkosten nach Kostenstelle (MEUR)",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "F15",
+    "label": "= Gesamtaufwand"
+   }
+  ]
  },
  {
   "sheet": "4 Personal",
@@ -1521,7 +2116,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": "​+ Einstellungen/Entlassungen/Training",
   "value": 0.01,
   "major": "B) Personalkosten nach Kostenstelle (MEUR)",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "F15",
+    "label": "= Gesamtaufwand"
+   }
+  ]
  },
  {
   "sheet": "4 Personal",
@@ -1530,7 +2131,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": "​+ Personalnebenkosten",
   "value": 0.22,
   "major": "B) Personalkosten nach Kostenstelle (MEUR)",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "F15",
+    "label": "= Gesamtaufwand"
+   }
+  ]
  },
  {
   "sheet": "4 Personal",
@@ -1539,7 +2146,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": "​+ Pensionsrückstellungen",
   "value": 0.03,
   "major": "B) Personalkosten nach Kostenstelle (MEUR)",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "F15",
+    "label": "= Gesamtaufwand"
+   }
+  ]
  },
  {
   "sheet": "4 Personal",
@@ -1548,7 +2161,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 5.82,
   "major": "B) Personalkosten nach Kostenstelle (MEUR)",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "F16",
+    "label": "= Gesamtaufwand"
+   }
+  ]
  },
  {
   "sheet": "4 Personal",
@@ -1557,7 +2176,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": 0.01,
   "value": 0.2,
   "major": "B) Personalkosten nach Kostenstelle (MEUR)",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "F16",
+    "label": "= Gesamtaufwand"
+   }
+  ]
  },
  {
   "sheet": "4 Personal",
@@ -1566,7 +2191,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": 0.22,
   "value": 2.33,
   "major": "B) Personalkosten nach Kostenstelle (MEUR)",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "F16",
+    "label": "= Gesamtaufwand"
+   }
+  ]
  },
  {
   "sheet": "4 Personal",
@@ -1575,7 +2206,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": 0.03,
   "value": 0.29,
   "major": "B) Personalkosten nach Kostenstelle (MEUR)",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "F16",
+    "label": "= Gesamtaufwand"
+   }
+  ]
  },
  {
   "sheet": "4 Personal",
@@ -1584,7 +2221,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 25.56,
   "major": "B) Personalkosten nach Kostenstelle (MEUR)",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "F17",
+    "label": "= Gesamtaufwand"
+   }
+  ]
  },
  {
   "sheet": "4 Personal",
@@ -1593,7 +2236,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": 0.2,
   "value": 1.48,
   "major": "B) Personalkosten nach Kostenstelle (MEUR)",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "F17",
+    "label": "= Gesamtaufwand"
+   }
+  ]
  },
  {
   "sheet": "4 Personal",
@@ -1602,7 +2251,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": 2.33,
   "value": 10.22,
   "major": "B) Personalkosten nach Kostenstelle (MEUR)",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "F17",
+    "label": "= Gesamtaufwand"
+   }
+  ]
  },
  {
   "sheet": "4 Personal",
@@ -1611,7 +2266,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": 0.29,
   "value": 1.28,
   "major": "B) Personalkosten nach Kostenstelle (MEUR)",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "F17",
+    "label": "= Gesamtaufwand"
+   }
+  ]
  },
  {
   "sheet": "4 Personal",
@@ -1620,7 +2281,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 1.54,
   "major": "B) Personalkosten nach Kostenstelle (MEUR)",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "F18",
+    "label": "= Gesamtaufwand"
+   }
+  ]
  },
  {
   "sheet": "4 Personal",
@@ -1629,7 +2296,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": 1.48,
   "value": 0.03,
   "major": "B) Personalkosten nach Kostenstelle (MEUR)",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "F18",
+    "label": "= Gesamtaufwand"
+   }
+  ]
  },
  {
   "sheet": "4 Personal",
@@ -1638,7 +2311,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": 10.22,
   "value": 0.62,
   "major": "B) Personalkosten nach Kostenstelle (MEUR)",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "F18",
+    "label": "= Gesamtaufwand"
+   }
+  ]
  },
  {
   "sheet": "4 Personal",
@@ -1647,7 +2326,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": 1.28,
   "value": 0.08,
   "major": "B) Personalkosten nach Kostenstelle (MEUR)",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "F18",
+    "label": "= Gesamtaufwand"
+   }
+  ]
  },
  {
   "sheet": "4 Personal",
@@ -1656,7 +2341,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 4,
   "major": "B) Personalkosten nach Kostenstelle (MEUR)",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "F19",
+    "label": "= Gesamtaufwand"
+   }
+  ]
  },
  {
   "sheet": "4 Personal",
@@ -1665,7 +2356,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": 0.03,
   "value": 0.11,
   "major": "B) Personalkosten nach Kostenstelle (MEUR)",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "F19",
+    "label": "= Gesamtaufwand"
+   }
+  ]
  },
  {
   "sheet": "4 Personal",
@@ -1674,7 +2371,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": 0.62,
   "value": 1.6,
   "major": "B) Personalkosten nach Kostenstelle (MEUR)",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "F19",
+    "label": "= Gesamtaufwand"
+   }
+  ]
  },
  {
   "sheet": "4 Personal",
@@ -1683,7 +2386,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": 0.08,
   "value": 0.2,
   "major": "B) Personalkosten nach Kostenstelle (MEUR)",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "F19",
+    "label": "= Gesamtaufwand"
+   }
+  ]
  },
  {
   "sheet": "4 Personal",
@@ -1692,7 +2401,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 0.85,
   "major": "B) Personalkosten nach Kostenstelle (MEUR)",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "4 Personal",
@@ -1701,7 +2411,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 0.4,
   "major": "C) Sätze & Parameter",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "4 Personal",
@@ -1710,7 +2421,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 0.05,
   "major": "C) Sätze & Parameter",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "4 Personal",
@@ -1719,7 +2431,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 12500,
   "major": "C) Sätze & Parameter",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "4 Personal",
@@ -1728,7 +2441,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 10000,
   "major": "C) Sätze & Parameter",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
@@ -1737,7 +2451,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 27,
   "major": "A) Kredite – Übersicht Periode 0",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "D6",
+    "label": "Zinsaufwand (MEUR)"
+   }
+  ]
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
@@ -1746,7 +2466,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": "Zinssatz Periode 0",
   "value": 0.08,
   "major": "A) Kredite – Übersicht Periode 0",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "D6",
+    "label": "Zinsaufwand (MEUR)"
+   }
+  ]
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
@@ -1755,7 +2481,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 0,
   "major": "A) Kredite – Übersicht Periode 0",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "D7",
+    "label": "Zinsaufwand (MEUR)"
+   }
+  ]
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
@@ -1764,7 +2496,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": 0.08,
   "value": 0.07,
   "major": "A) Kredite – Übersicht Periode 0",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "D7",
+    "label": "Zinsaufwand (MEUR)"
+   }
+  ]
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
@@ -1773,7 +2511,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 0,
   "major": "A) Kredite – Übersicht Periode 0",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "D8",
+    "label": "Zinsaufwand (MEUR)"
+   }
+  ]
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
@@ -1782,7 +2526,13 @@ _INPUTS_META_JSON = r'''[
   "col_label": 0.07,
   "value": 0.13,
   "major": "A) Kredite – Übersicht Periode 0",
-  "sub": null
+  "sub": null,
+  "siblings": [
+   {
+    "cell": "D8",
+    "label": "Zinsaufwand (MEUR)"
+   }
+  ]
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
@@ -1791,7 +2541,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": "BBB",
   "major": "B) Referenz: Rating → Zinsänderung auf Basiszins der Folgeperiode",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
@@ -1800,7 +2551,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 72.15,
   "major": "C) Bilanzkennzahlen (Basis für Rating & Wertorientierte Kennzahlen)",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
@@ -1809,7 +2561,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": "Vorperiode (MEUR)",
   "value": 80,
   "major": "C) Bilanzkennzahlen (Basis für Rating & Wertorientierte Kennzahlen)",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
@@ -1818,7 +2571,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 31.27,
   "major": "C) Bilanzkennzahlen (Basis für Rating & Wertorientierte Kennzahlen)",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
@@ -1827,7 +2581,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": 80,
   "value": 28,
   "major": "C) Bilanzkennzahlen (Basis für Rating & Wertorientierte Kennzahlen)",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
@@ -1836,7 +2591,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 40.87,
   "major": "C) Bilanzkennzahlen (Basis für Rating & Wertorientierte Kennzahlen)",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
@@ -1845,7 +2601,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": 28,
   "value": 52,
   "major": "C) Bilanzkennzahlen (Basis für Rating & Wertorientierte Kennzahlen)",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
@@ -1854,7 +2611,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 0.5665,
   "major": "C) Bilanzkennzahlen (Basis für Rating & Wertorientierte Kennzahlen)",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
@@ -1863,7 +2621,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 0.1527,
   "major": "D) Wertorientierte Kennzahlen",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
@@ -1872,7 +2631,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 0.0673,
   "major": "D) Wertorientierte Kennzahlen",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
@@ -1881,7 +2641,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 5.46,
   "major": "D) Wertorientierte Kennzahlen",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
@@ -1890,7 +2651,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 13.3,
   "major": "D) Wertorientierte Kennzahlen",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
@@ -1899,7 +2661,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 43.94,
   "major": "D) Wertorientierte Kennzahlen",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
@@ -1908,7 +2671,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 71.29,
   "major": "D) Wertorientierte Kennzahlen",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
@@ -1917,7 +2681,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 14.35,
   "major": "D) Wertorientierte Kennzahlen",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
@@ -1926,7 +2691,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 500000,
   "major": "E) Aktienkurs, Unternehmenswert & Shareholder Earnings",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
@@ -1935,7 +2701,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 196.91,
   "major": "E) Aktienkurs, Unternehmenswert & Shareholder Earnings",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
@@ -1944,7 +2711,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 98.45,
   "major": "E) Aktienkurs, Unternehmenswert & Shareholder Earnings",
-  "sub": null
+  "sub": null,
+  "siblings": []
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
@@ -1953,7 +2721,8 @@ _INPUTS_META_JSON = r'''[
   "col_label": null,
   "value": 0,
   "major": "E) Aktienkurs, Unternehmenswert & Shareholder Earnings",
-  "sub": null
+  "sub": null,
+  "siblings": []
  }
 ]'''
 
@@ -4825,6 +5594,7 @@ with tab_input:
         st.info("Periode 0 enthält die fixen Ausgangsdaten aus der Excel-Datei und kann nicht verändert werden. Erstelle eine neue Periode, um Werte anzupassen.")
     else:
         st.subheader(f"Eingabewerte bearbeiten – Periode {selected}")
+        st.caption("Werte direkt in der Tabelle ändern. Berechnete Spalten (z. B. % vom Umsatz) aktualisieren sich nach dem Speichern automatisch.")
         structure = get_structure()
         sheet_tabs = st.tabs(sheets_order)
         new_overrides = {}
@@ -4846,18 +5616,49 @@ with tab_input:
                             if sub_items:
                                 if sub_title:
                                     st.markdown(f"**{sub_title}**")
-                                cols = st.columns(2)
-                                for i, m in enumerate(sub_items):
-                                    label = m["label"]
-                                    if m.get("col_label"):
-                                        label = f"{label} – {m['col_label']}"
-                                    cur = periods.get(selected, {}).get(sheet, {}).get(m["cell"], m["value"])
-                                    with cols[i % 2]:
-                                        if isinstance(m["value"], str):
+
+                                has_text = any(isinstance(m["value"], str) for m in sub_items)
+                                if has_text:
+                                    cols = st.columns(2)
+                                    for i, m in enumerate(sub_items):
+                                        label = m["label"]
+                                        if m.get("col_label"):
+                                            label = f"{label} – {m['col_label']}"
+                                        cur = periods.get(selected, {}).get(sheet, {}).get(m["cell"], m["value"])
+                                        with cols[i % 2]:
                                             val = st.text_input(label, value=str(cur), key=f"{sheet}_{m['cell']}")
-                                        else:
-                                            val = st.number_input(label, value=float(cur), key=f"{sheet}_{m['cell']}", format="%.6g")
-                                    new_overrides.setdefault(sheet, {})[m["cell"]] = val
+                                        new_overrides.setdefault(sheet, {})[m["cell"]] = val
+                                else:
+                                    sib_labels = []
+                                    for m in sub_items:
+                                        for s in m.get("siblings", []):
+                                            if s["label"] not in sib_labels:
+                                                sib_labels.append(s["label"])
+
+                                    rows = []
+                                    for m in sub_items:
+                                        label = m["label"]
+                                        if m.get("col_label"):
+                                            label = f"{label} – {m['col_label']}"
+                                        cur = periods.get(selected, {}).get(sheet, {}).get(m["cell"], m["value"])
+                                        row = {"Position": label, "Wert": float(cur)}
+                                        sib_map = {s["label"]: s["cell"] for s in m.get("siblings", [])}
+                                        for sl in sib_labels:
+                                            if sl in sib_map:
+                                                row[sl] = get_value(sol, sheet, sib_map[sl])
+                                            else:
+                                                row[sl] = None
+                                        rows.append(row)
+
+                                    df = pd.DataFrame(rows)
+                                    disabled_cols = ["Position"] + sib_labels
+                                    edited = st.data_editor(
+                                        df, key=f"editor_{sheet}_{major}_{sub_title}",
+                                        disabled=disabled_cols, hide_index=True,
+                                        use_container_width=True,
+                                    )
+                                    for i, m in enumerate(sub_items):
+                                        new_overrides.setdefault(sheet, {})[m["cell"]] = edited.loc[i, "Wert"]
                                 st.markdown("")
                             elif sub["rows"]:
                                 if sub_title:
