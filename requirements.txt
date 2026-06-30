@@ -1,0 +1,5 @@
+streamlit
+formulas
+openpyxl
+plotly
+schedula
