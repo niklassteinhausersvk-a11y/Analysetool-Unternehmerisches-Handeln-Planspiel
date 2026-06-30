@@ -17,7 +17,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Wirtschaftswachstum (Konjunktur, %)",
   "col_label": null,
   "value": 0.02,
-  "section": "A) Absatzplanung Copy Classic – Markt 1"
+  "major": "A) Absatzplanung Copy Classic – Markt 1",
+  "sub": null
  },
  {
   "sheet": "1 Absatzplanung",
@@ -25,7 +26,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Absatz Vorperiode (Stück)",
   "col_label": null,
   "value": 43000,
-  "section": "A) Absatzplanung Copy Classic – Markt 1"
+  "major": "A) Absatzplanung Copy Classic – Markt 1",
+  "sub": null
  },
  {
   "sheet": "1 Absatzplanung",
@@ -33,7 +35,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Geplanter Marktanteil (%)",
   "col_label": null,
   "value": 0.2,
-  "section": "A) Absatzplanung Copy Classic – Markt 1"
+  "major": "A) Absatzplanung Copy Classic – Markt 1",
+  "sub": null
  },
  {
   "sheet": "1 Absatzplanung",
@@ -41,7 +44,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Geplanter Preis (EUR/Stück)",
   "col_label": null,
   "value": 3000,
-  "section": "A) Absatzplanung Copy Classic – Markt 1"
+  "major": "A) Absatzplanung Copy Classic – Markt 1",
+  "sub": null
  },
  {
   "sheet": "2 Finanzen",
@@ -49,7 +53,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Umsatzerlöse",
   "col_label": null,
   "value": 129,
-  "section": "Gesamtkostenverfahren"
+  "major": "A) Gewinn- und Verlustrechnung (GuV)",
+  "sub": "Gesamtkostenverfahren"
  },
  {
   "sheet": "2 Finanzen",
@@ -57,7 +62,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Sonstige Erträge",
   "col_label": null,
   "value": 0,
-  "section": "Gesamtkostenverfahren"
+  "major": "A) Gewinn- und Verlustrechnung (GuV)",
+  "sub": "Gesamtkostenverfahren"
  },
  {
   "sheet": "2 Finanzen",
@@ -65,7 +71,8 @@ _INPUTS_META_JSON = r'''[
   "label": "- Abschreibungen",
   "col_label": null,
   "value": 7.15,
-  "section": "Gesamtkostenverfahren"
+  "major": "A) Gewinn- und Verlustrechnung (GuV)",
+  "sub": "Gesamtkostenverfahren"
  },
  {
   "sheet": "2 Finanzen",
@@ -73,7 +80,8 @@ _INPUTS_META_JSON = r'''[
   "label": "+ Erträge aus Wertpapieren",
   "col_label": null,
   "value": 0,
-  "section": "Periodenüberschuss / -fehlbetrag"
+  "major": "A) Gewinn- und Verlustrechnung (GuV)",
+  "sub": "Periodenüberschuss / -fehlbetrag"
  },
  {
   "sheet": "2 Finanzen",
@@ -81,7 +89,8 @@ _INPUTS_META_JSON = r'''[
   "label": "- Steuern auf Einkommen und Ertrag (45%)",
   "col_label": null,
   "value": 3.5,
-  "section": "Periodenüberschuss / -fehlbetrag"
+  "major": "A) Gewinn- und Verlustrechnung (GuV)",
+  "sub": "Periodenüberschuss / -fehlbetrag"
  },
  {
   "sheet": "2 Finanzen",
@@ -89,7 +98,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Gewinn-/Verlustvortrag der Vorperiode",
   "col_label": null,
   "value": 3,
-  "section": "Ergebnisverwendung"
+  "major": "A) Gewinn- und Verlustrechnung (GuV)",
+  "sub": "Ergebnisverwendung"
  },
  {
   "sheet": "2 Finanzen",
@@ -97,7 +107,8 @@ _INPUTS_META_JSON = r'''[
   "label": "- Ausschüttung Dividende aktuelle Periode",
   "col_label": null,
   "value": 1,
-  "section": "Ergebnisverwendung"
+  "major": "A) Gewinn- und Verlustrechnung (GuV)",
+  "sub": "Ergebnisverwendung"
  },
  {
   "sheet": "2 Finanzen",
@@ -105,7 +116,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Umsatzerlöse",
   "col_label": "Großabnehmer",
   "value": 0,
-  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
+  "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
+  "sub": null
  },
  {
   "sheet": "2 Finanzen",
@@ -113,7 +125,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Umsatzerlöse",
   "col_label": "Ausschreibung",
   "value": 0,
-  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
+  "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
+  "sub": null
  },
  {
   "sheet": "2 Finanzen",
@@ -121,7 +134,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Umsatzerlöse",
   "col_label": "Markt 2",
   "value": 0,
-  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
+  "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
+  "sub": null
  },
  {
   "sheet": "2 Finanzen",
@@ -129,7 +143,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Umsatzerlöse",
   "col_label": "Sondermarkt",
   "value": 0,
-  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
+  "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
+  "sub": null
  },
  {
   "sheet": "2 Finanzen",
@@ -137,7 +152,8 @@ _INPUTS_META_JSON = r'''[
   "label": "- Variable Materialkosten",
   "col_label": null,
   "value": 24.75,
-  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
+  "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
+  "sub": null
  },
  {
   "sheet": "2 Finanzen",
@@ -145,7 +161,8 @@ _INPUTS_META_JSON = r'''[
   "label": "- Variable Materialkosten",
   "col_label": "Großabnehmer",
   "value": 0,
-  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
+  "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
+  "sub": null
  },
  {
   "sheet": "2 Finanzen",
@@ -153,7 +170,8 @@ _INPUTS_META_JSON = r'''[
   "label": "- Variable Materialkosten",
   "col_label": "Ausschreibung",
   "value": 0,
-  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
+  "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
+  "sub": null
  },
  {
   "sheet": "2 Finanzen",
@@ -161,7 +179,8 @@ _INPUTS_META_JSON = r'''[
   "label": "- Variable Materialkosten",
   "col_label": "Markt 2",
   "value": 0,
-  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
+  "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
+  "sub": null
  },
  {
   "sheet": "2 Finanzen",
@@ -169,7 +188,8 @@ _INPUTS_META_JSON = r'''[
   "label": "- Variable Materialkosten",
   "col_label": "Sondermarkt",
   "value": 0,
-  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
+  "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
+  "sub": null
  },
  {
   "sheet": "2 Finanzen",
@@ -177,7 +197,8 @@ _INPUTS_META_JSON = r'''[
   "label": "- Variable Fertigungskosten",
   "col_label": null,
   "value": 38.61,
-  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
+  "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
+  "sub": null
  },
  {
   "sheet": "2 Finanzen",
@@ -185,7 +206,8 @@ _INPUTS_META_JSON = r'''[
   "label": "- Variable Fertigungskosten",
   "col_label": "Großabnehmer",
   "value": 0,
-  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
+  "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
+  "sub": null
  },
  {
   "sheet": "2 Finanzen",
@@ -193,7 +215,8 @@ _INPUTS_META_JSON = r'''[
   "label": "- Variable Fertigungskosten",
   "col_label": "Ausschreibung",
   "value": 0,
-  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
+  "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
+  "sub": null
  },
  {
   "sheet": "2 Finanzen",
@@ -201,7 +224,8 @@ _INPUTS_META_JSON = r'''[
   "label": "- Variable Fertigungskosten",
   "col_label": "Markt 2",
   "value": 0,
-  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
+  "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
+  "sub": null
  },
  {
   "sheet": "2 Finanzen",
@@ -209,7 +233,8 @@ _INPUTS_META_JSON = r'''[
   "label": "- Variable Fertigungskosten",
   "col_label": "Sondermarkt",
   "value": 0,
-  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
+  "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
+  "sub": null
  },
  {
   "sheet": "2 Finanzen",
@@ -217,7 +242,8 @@ _INPUTS_META_JSON = r'''[
   "label": "- Transportkosten",
   "col_label": null,
   "value": 1.08,
-  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
+  "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
+  "sub": null
  },
  {
   "sheet": "2 Finanzen",
@@ -225,7 +251,8 @@ _INPUTS_META_JSON = r'''[
   "label": "- Transportkosten",
   "col_label": "Großabnehmer",
   "value": 0,
-  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
+  "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
+  "sub": null
  },
  {
   "sheet": "2 Finanzen",
@@ -233,7 +260,8 @@ _INPUTS_META_JSON = r'''[
   "label": "- Transportkosten",
   "col_label": "Ausschreibung",
   "value": 0,
-  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
+  "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
+  "sub": null
  },
  {
   "sheet": "2 Finanzen",
@@ -241,7 +269,8 @@ _INPUTS_META_JSON = r'''[
   "label": "- Transportkosten",
   "col_label": "Markt 2",
   "value": 0,
-  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
+  "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
+  "sub": null
  },
  {
   "sheet": "2 Finanzen",
@@ -249,7 +278,8 @@ _INPUTS_META_JSON = r'''[
   "label": "- Transportkosten",
   "col_label": "Sondermarkt",
   "value": 0,
-  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
+  "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
+  "sub": null
  },
  {
   "sheet": "2 Finanzen",
@@ -257,7 +287,8 @@ _INPUTS_META_JSON = r'''[
   "label": "- Fixe Materialkosten",
   "col_label": null,
   "value": 1.67,
-  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
+  "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
+  "sub": null
  },
  {
   "sheet": "2 Finanzen",
@@ -265,7 +296,8 @@ _INPUTS_META_JSON = r'''[
   "label": "- Fixe Materialkosten",
   "col_label": "Großabnehmer",
   "value": 0,
-  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
+  "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
+  "sub": null
  },
  {
   "sheet": "2 Finanzen",
@@ -273,7 +305,8 @@ _INPUTS_META_JSON = r'''[
   "label": "- Fixe Materialkosten",
   "col_label": "Ausschreibung",
   "value": 0,
-  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
+  "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
+  "sub": null
  },
  {
   "sheet": "2 Finanzen",
@@ -281,7 +314,8 @@ _INPUTS_META_JSON = r'''[
   "label": "- Fixe Materialkosten",
   "col_label": "Markt 2",
   "value": 0,
-  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
+  "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
+  "sub": null
  },
  {
   "sheet": "2 Finanzen",
@@ -289,7 +323,8 @@ _INPUTS_META_JSON = r'''[
   "label": "- Fixe Materialkosten",
   "col_label": "Sondermarkt",
   "value": 0,
-  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
+  "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
+  "sub": null
  },
  {
   "sheet": "2 Finanzen",
@@ -297,7 +332,8 @@ _INPUTS_META_JSON = r'''[
   "label": "- Fixe Fertigungskosten",
   "col_label": null,
   "value": 22.99,
-  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
+  "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
+  "sub": null
  },
  {
   "sheet": "2 Finanzen",
@@ -305,7 +341,8 @@ _INPUTS_META_JSON = r'''[
   "label": "- Fixe Fertigungskosten",
   "col_label": "Großabnehmer",
   "value": 0,
-  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
+  "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
+  "sub": null
  },
  {
   "sheet": "2 Finanzen",
@@ -313,7 +350,8 @@ _INPUTS_META_JSON = r'''[
   "label": "- Fixe Fertigungskosten",
   "col_label": "Ausschreibung",
   "value": 0,
-  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
+  "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
+  "sub": null
  },
  {
   "sheet": "2 Finanzen",
@@ -321,7 +359,8 @@ _INPUTS_META_JSON = r'''[
   "label": "- Fixe Fertigungskosten",
   "col_label": "Markt 2",
   "value": 0,
-  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
+  "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
+  "sub": null
  },
  {
   "sheet": "2 Finanzen",
@@ -329,7 +368,8 @@ _INPUTS_META_JSON = r'''[
   "label": "- Fixe Fertigungskosten",
   "col_label": "Sondermarkt",
   "value": 0,
-  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
+  "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
+  "sub": null
  },
  {
   "sheet": "2 Finanzen",
@@ -337,7 +377,8 @@ _INPUTS_META_JSON = r'''[
   "label": "- Werbungskosten",
   "col_label": null,
   "value": 6,
-  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
+  "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
+  "sub": null
  },
  {
   "sheet": "2 Finanzen",
@@ -345,7 +386,8 @@ _INPUTS_META_JSON = r'''[
   "label": "- Werbungskosten",
   "col_label": "Großabnehmer",
   "value": 0,
-  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
+  "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
+  "sub": null
  },
  {
   "sheet": "2 Finanzen",
@@ -353,7 +395,8 @@ _INPUTS_META_JSON = r'''[
   "label": "- Werbungskosten",
   "col_label": "Ausschreibung",
   "value": 0,
-  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
+  "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
+  "sub": null
  },
  {
   "sheet": "2 Finanzen",
@@ -361,7 +404,8 @@ _INPUTS_META_JSON = r'''[
   "label": "- Werbungskosten",
   "col_label": "Markt 2",
   "value": 0,
-  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
+  "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
+  "sub": null
  },
  {
   "sheet": "2 Finanzen",
@@ -369,7 +413,8 @@ _INPUTS_META_JSON = r'''[
   "label": "- Werbungskosten",
   "col_label": "Sondermarkt",
   "value": 0,
-  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
+  "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
+  "sub": null
  },
  {
   "sheet": "2 Finanzen",
@@ -377,7 +422,8 @@ _INPUTS_META_JSON = r'''[
   "label": "- Entwicklungskosten",
   "col_label": "Großabnehmer",
   "value": 0,
-  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
+  "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
+  "sub": null
  },
  {
   "sheet": "2 Finanzen",
@@ -385,7 +431,8 @@ _INPUTS_META_JSON = r'''[
   "label": "- Entwicklungskosten",
   "col_label": "Ausschreibung",
   "value": 0,
-  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
+  "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
+  "sub": null
  },
  {
   "sheet": "2 Finanzen",
@@ -393,7 +440,8 @@ _INPUTS_META_JSON = r'''[
   "label": "- Entwicklungskosten",
   "col_label": "Markt 2",
   "value": 0,
-  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
+  "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
+  "sub": null
  },
  {
   "sheet": "2 Finanzen",
@@ -401,7 +449,8 @@ _INPUTS_META_JSON = r'''[
   "label": "- Entwicklungskosten",
   "col_label": "Sondermarkt",
   "value": 0,
-  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
+  "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
+  "sub": null
  },
  {
   "sheet": "2 Finanzen",
@@ -409,7 +458,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Preis Markt 1",
   "col_label": null,
   "value": 3000,
-  "section": "Deckungsbeitragsrechnung pro Stück (EUR, Markt 1 / Durchschnitt)"
+  "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
+  "sub": "Deckungsbeitragsrechnung pro Stück (EUR, Markt 1 / Durchschnitt)"
  },
  {
   "sheet": "2 Finanzen",
@@ -417,7 +467,8 @@ _INPUTS_META_JSON = r'''[
   "label": "- Var. Materialkosten/Stück",
   "col_label": null,
   "value": 575.56,
-  "section": "Deckungsbeitragsrechnung pro Stück (EUR, Markt 1 / Durchschnitt)"
+  "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
+  "sub": "Deckungsbeitragsrechnung pro Stück (EUR, Markt 1 / Durchschnitt)"
  },
  {
   "sheet": "2 Finanzen",
@@ -425,7 +476,8 @@ _INPUTS_META_JSON = r'''[
   "label": "- Var. Fertigungskosten/Stück",
   "col_label": null,
   "value": 897.81,
-  "section": "Deckungsbeitragsrechnung pro Stück (EUR, Markt 1 / Durchschnitt)"
+  "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
+  "sub": "Deckungsbeitragsrechnung pro Stück (EUR, Markt 1 / Durchschnitt)"
  },
  {
   "sheet": "2 Finanzen",
@@ -433,7 +485,8 @@ _INPUTS_META_JSON = r'''[
   "label": "- Transportkosten/Stück",
   "col_label": null,
   "value": 25,
-  "section": "Deckungsbeitragsrechnung pro Stück (EUR, Markt 1 / Durchschnitt)"
+  "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
+  "sub": "Deckungsbeitragsrechnung pro Stück (EUR, Markt 1 / Durchschnitt)"
  },
  {
   "sheet": "2 Finanzen",
@@ -441,7 +494,8 @@ _INPUTS_META_JSON = r'''[
   "label": "= DB V / Stück (Periode 0)",
   "col_label": null,
   "value": 230.98,
-  "section": "Deckungsbeitragsrechnung pro Stück (EUR, Markt 1 / Durchschnitt)"
+  "major": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
+  "sub": "Deckungsbeitragsrechnung pro Stück (EUR, Markt 1 / Durchschnitt)"
  },
  {
   "sheet": "2 Finanzen",
@@ -449,7 +503,8 @@ _INPUTS_META_JSON = r'''[
   "label": "+ Einkauf Einzelkosten",
   "col_label": null,
   "value": 23.09,
-  "section": "Gesamt (MEUR)"
+  "major": "C) Kostenträgerrechnung – Copy Classic",
+  "sub": "Gesamt (MEUR)"
  },
  {
   "sheet": "2 Finanzen",
@@ -457,7 +512,8 @@ _INPUTS_META_JSON = r'''[
   "label": "+ Einkauf Gemeinkosten",
   "col_label": null,
   "value": 1.56,
-  "section": "Gesamt (MEUR)"
+  "major": "C) Kostenträgerrechnung – Copy Classic",
+  "sub": "Gesamt (MEUR)"
  },
  {
   "sheet": "2 Finanzen",
@@ -465,7 +521,8 @@ _INPUTS_META_JSON = r'''[
   "label": "+ Fertigung Einzelkosten",
   "col_label": null,
   "value": 36.01,
-  "section": "Gesamt (MEUR)"
+  "major": "C) Kostenträgerrechnung – Copy Classic",
+  "sub": "Gesamt (MEUR)"
  },
  {
   "sheet": "2 Finanzen",
@@ -473,7 +530,8 @@ _INPUTS_META_JSON = r'''[
   "label": "+ Fertigung Gemeinkosten",
   "col_label": null,
   "value": 21.43,
-  "section": "Gesamt (MEUR)"
+  "major": "C) Kostenträgerrechnung – Copy Classic",
+  "sub": "Gesamt (MEUR)"
  },
  {
   "sheet": "2 Finanzen",
@@ -481,7 +539,8 @@ _INPUTS_META_JSON = r'''[
   "label": "+/- Bestandsveränderung Fertigprodukte",
   "col_label": null,
   "value": 5.93,
-  "section": "Gesamt (MEUR)"
+  "major": "C) Kostenträgerrechnung – Copy Classic",
+  "sub": "Gesamt (MEUR)"
  },
  {
   "sheet": "2 Finanzen",
@@ -489,7 +548,8 @@ _INPUTS_META_JSON = r'''[
   "label": "+ F&E Einzelkosten",
   "col_label": null,
   "value": 3.5,
-  "section": "Gesamt (MEUR)"
+  "major": "C) Kostenträgerrechnung – Copy Classic",
+  "sub": "Gesamt (MEUR)"
  },
  {
   "sheet": "2 Finanzen",
@@ -497,7 +557,8 @@ _INPUTS_META_JSON = r'''[
   "label": "+ F&E Gemeinkosten",
   "col_label": null,
   "value": 2.27,
-  "section": "Gesamt (MEUR)"
+  "major": "C) Kostenträgerrechnung – Copy Classic",
+  "sub": "Gesamt (MEUR)"
  },
  {
   "sheet": "2 Finanzen",
@@ -505,7 +566,8 @@ _INPUTS_META_JSON = r'''[
   "label": "+ Vertrieb Gemeinkosten",
   "col_label": null,
   "value": 8.53,
-  "section": "Gesamt (MEUR)"
+  "major": "C) Kostenträgerrechnung – Copy Classic",
+  "sub": "Gesamt (MEUR)"
  },
  {
   "sheet": "2 Finanzen",
@@ -513,7 +575,8 @@ _INPUTS_META_JSON = r'''[
   "label": "+ Verwaltung Einzelkosten",
   "col_label": null,
   "value": 0,
-  "section": "Gesamt (MEUR)"
+  "major": "C) Kostenträgerrechnung – Copy Classic",
+  "sub": "Gesamt (MEUR)"
  },
  {
   "sheet": "2 Finanzen",
@@ -521,7 +584,8 @@ _INPUTS_META_JSON = r'''[
   "label": "+ Verwaltung Gemeinkosten",
   "col_label": null,
   "value": 9.68,
-  "section": "Gesamt (MEUR)"
+  "major": "C) Kostenträgerrechnung – Copy Classic",
+  "sub": "Gesamt (MEUR)"
  },
  {
   "sheet": "2 Finanzen",
@@ -529,7 +593,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Kassenanfangsbestand",
   "col_label": null,
   "value": 0.5,
-  "section": "D) Liquiditätsrechnung"
+  "major": "D) Liquiditätsrechnung",
+  "sub": null
  },
  {
   "sheet": "2 Finanzen",
@@ -537,7 +602,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Einzahlungen aus Umsatz aktuelle Periode",
   "col_label": null,
   "value": 103.2,
-  "section": "D) Liquiditätsrechnung"
+  "major": "D) Liquiditätsrechnung",
+  "sub": null
  },
  {
   "sheet": "2 Finanzen",
@@ -545,7 +611,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Einzahlungen aus Umsatz Vorperiode",
   "col_label": null,
   "value": 17.84,
-  "section": "D) Liquiditätsrechnung"
+  "major": "D) Liquiditätsrechnung",
+  "sub": null
  },
  {
   "sheet": "2 Finanzen",
@@ -553,7 +620,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Verkauf von Wertpapieren",
   "col_label": null,
   "value": 0,
-  "section": "D) Liquiditätsrechnung"
+  "major": "D) Liquiditätsrechnung",
+  "sub": null
  },
  {
   "sheet": "2 Finanzen",
@@ -561,7 +629,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Zinserträge",
   "col_label": null,
   "value": 0,
-  "section": "D) Liquiditätsrechnung"
+  "major": "D) Liquiditätsrechnung",
+  "sub": null
  },
  {
   "sheet": "2 Finanzen",
@@ -569,7 +638,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Sonstige Einzahlungen/Kapitalerhöhung",
   "col_label": null,
   "value": 0,
-  "section": "D) Liquiditätsrechnung"
+  "major": "D) Liquiditätsrechnung",
+  "sub": null
  },
  {
   "sheet": "2 Finanzen",
@@ -577,7 +647,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Desinvestitionen Fertigungsanlagen",
   "col_label": null,
   "value": 0,
-  "section": "D) Liquiditätsrechnung"
+  "major": "D) Liquiditätsrechnung",
+  "sub": null
  },
  {
   "sheet": "2 Finanzen",
@@ -585,7 +656,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Erlös Sondermarkt",
   "col_label": null,
   "value": 0,
-  "section": "D) Liquiditätsrechnung"
+  "major": "D) Liquiditätsrechnung",
+  "sub": null
  },
  {
   "sheet": "2 Finanzen",
@@ -593,7 +665,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Überziehungskredit",
   "col_label": null,
   "value": 0,
-  "section": "D) Liquiditätsrechnung"
+  "major": "D) Liquiditätsrechnung",
+  "sub": null
  },
  {
   "sheet": "2 Finanzen",
@@ -601,7 +674,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Einsatzstoffe/Betriebsstoffe/Fertigerzeugnisse",
   "col_label": null,
   "value": 18.5,
-  "section": "D) Liquiditätsrechnung"
+  "major": "D) Liquiditätsrechnung",
+  "sub": null
  },
  {
   "sheet": "2 Finanzen",
@@ -609,7 +683,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Einkauf Vorperiode",
   "col_label": null,
   "value": 0,
-  "section": "D) Liquiditätsrechnung"
+  "major": "D) Liquiditätsrechnung",
+  "sub": null
  },
  {
   "sheet": "2 Finanzen",
@@ -617,7 +692,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Sonstige Aufwendungen",
   "col_label": null,
   "value": 26.75,
-  "section": "D) Liquiditätsrechnung"
+  "major": "D) Liquiditätsrechnung",
+  "sub": null
  },
  {
   "sheet": "2 Finanzen",
@@ -625,7 +701,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Rückzahlung kurzfr. Kredite & Überziehungskredit",
   "col_label": null,
   "value": 40,
-  "section": "D) Liquiditätsrechnung"
+  "major": "D) Liquiditätsrechnung",
+  "sub": null
  },
  {
   "sheet": "2 Finanzen",
@@ -633,7 +710,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Kauf von Fertigungsanlagen",
   "col_label": null,
   "value": 0,
-  "section": "D) Liquiditätsrechnung"
+  "major": "D) Liquiditätsrechnung",
+  "sub": null
  },
  {
   "sheet": "2 Finanzen",
@@ -641,7 +719,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Kauf von Wertpapieren",
   "col_label": null,
   "value": 0,
-  "section": "D) Liquiditätsrechnung"
+  "major": "D) Liquiditätsrechnung",
+  "sub": null
  },
  {
   "sheet": "2 Finanzen",
@@ -649,7 +728,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Kauf von Umweltanlagen",
   "col_label": null,
   "value": 1.5,
-  "section": "D) Liquiditätsrechnung"
+  "major": "D) Liquiditätsrechnung",
+  "sub": null
  },
  {
   "sheet": "2 Finanzen",
@@ -657,7 +737,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Sonstige Auszahlungen",
   "col_label": null,
   "value": 0,
-  "section": "D) Liquiditätsrechnung"
+  "major": "D) Liquiditätsrechnung",
+  "sub": null
  },
  {
   "sheet": "2 Finanzen",
@@ -665,7 +746,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Zinszahlung Überziehungskredit",
   "col_label": null,
   "value": 0,
-  "section": "D) Liquiditätsrechnung"
+  "major": "D) Liquiditätsrechnung",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -673,7 +755,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Typ A Nr. 1",
   "col_label": null,
   "value": -8,
-  "section": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)"
+  "major": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -681,7 +764,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Typ A Nr. 1",
   "col_label": "Beschaffungswert (MEUR)",
   "value": 12.5,
-  "section": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)"
+  "major": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -689,7 +773,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Typ A Nr. 1",
   "col_label": "Restlaufzeit (Perioden)",
   "value": 1,
-  "section": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)"
+  "major": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -697,7 +782,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Typ A Nr. 1",
   "col_label": "Abschreibung (MEUR/Per.)",
   "value": 1.25,
-  "section": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)"
+  "major": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -705,7 +791,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Typ A Nr. 1",
   "col_label": "Restbuchwert (MEUR)",
   "value": 1.25,
-  "section": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)"
+  "major": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -713,7 +800,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Typ A Nr. 1",
   "col_label": "Sonst. Fixkosten (MEUR)",
   "value": 1.5,
-  "section": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)"
+  "major": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -721,7 +809,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Typ A Nr. 1",
   "col_label": "Umweltindex",
   "value": 83,
-  "section": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)"
+  "major": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -729,7 +818,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Typ A Nr. 2",
   "col_label": null,
   "value": -7,
-  "section": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)"
+  "major": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -737,7 +827,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Typ A Nr. 2",
   "col_label": 12.5,
   "value": 15,
-  "section": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)"
+  "major": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -745,7 +836,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Typ A Nr. 2",
   "col_label": 1,
   "value": 2,
-  "section": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)"
+  "major": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -753,7 +845,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Typ A Nr. 2",
   "col_label": 1.25,
   "value": 1.5,
-  "section": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)"
+  "major": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -761,7 +854,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Typ A Nr. 2",
   "col_label": 1.25,
   "value": 3,
-  "section": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)"
+  "major": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -769,7 +863,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Typ A Nr. 2",
   "col_label": 1.5,
   "value": 1,
-  "section": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)"
+  "major": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -777,7 +872,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Typ A Nr. 2",
   "col_label": 83,
   "value": 90,
-  "section": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)"
+  "major": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -785,7 +881,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Typ A Nr. 3",
   "col_label": null,
   "value": -6,
-  "section": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)"
+  "major": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -793,7 +890,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Typ A Nr. 3",
   "col_label": 15,
   "value": 20,
-  "section": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)"
+  "major": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -801,7 +899,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Typ A Nr. 3",
   "col_label": 2,
   "value": 3,
-  "section": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)"
+  "major": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -809,7 +908,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Typ A Nr. 3",
   "col_label": 1.5,
   "value": 2,
-  "section": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)"
+  "major": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -817,7 +917,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Typ A Nr. 3",
   "col_label": 3,
   "value": 6,
-  "section": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)"
+  "major": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -825,7 +926,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Typ A Nr. 3",
   "col_label": 1,
   "value": 0.5,
-  "section": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)"
+  "major": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -833,7 +935,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Typ A Nr. 3",
   "col_label": 90,
   "value": 95,
-  "section": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)"
+  "major": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -841,7 +944,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Typ A Nr. 4",
   "col_label": null,
   "value": -5,
-  "section": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)"
+  "major": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -849,7 +953,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Typ A Nr. 4",
   "col_label": 20,
   "value": 20,
-  "section": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)"
+  "major": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -857,7 +962,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Typ A Nr. 4",
   "col_label": 3,
   "value": 4,
-  "section": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)"
+  "major": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -865,7 +971,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Typ A Nr. 4",
   "col_label": 2,
   "value": 2,
-  "section": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)"
+  "major": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -873,7 +980,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Typ A Nr. 4",
   "col_label": 6,
   "value": 8,
-  "section": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)"
+  "major": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -881,7 +989,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Typ A Nr. 4",
   "col_label": 0.5,
   "value": 0.25,
-  "section": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)"
+  "major": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -889,7 +998,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Typ A Nr. 4",
   "col_label": 95,
   "value": 98,
-  "section": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)"
+  "major": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -897,7 +1007,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Typ A Nr. 1",
   "col_label": null,
   "value": 8000,
-  "section": "B) Kapazität & Umweltindex der Anlagen"
+  "major": "B) Kapazität & Umweltindex der Anlagen",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -905,7 +1016,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Typ A Nr. 1",
   "col_label": "Instandhaltung (MEUR)",
   "value": 1.5,
-  "section": "B) Kapazität & Umweltindex der Anlagen"
+  "major": "B) Kapazität & Umweltindex der Anlagen",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -913,7 +1025,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Typ A Nr. 1",
   "col_label": "Verfügbarkeitsgrad (Faktor)",
   "value": 0.97,
-  "section": "B) Kapazität & Umweltindex der Anlagen"
+  "major": "B) Kapazität & Umweltindex der Anlagen",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -921,7 +1034,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Typ A Nr. 1",
   "col_label": "Rationalisierung (Faktor)",
   "value": 1,
-  "section": "B) Kapazität & Umweltindex der Anlagen"
+  "major": "B) Kapazität & Umweltindex der Anlagen",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -929,7 +1043,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Typ A Nr. 2",
   "col_label": null,
   "value": 9000,
-  "section": "B) Kapazität & Umweltindex der Anlagen"
+  "major": "B) Kapazität & Umweltindex der Anlagen",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -937,7 +1052,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Typ A Nr. 2",
   "col_label": 1.5,
   "value": 1.5,
-  "section": "B) Kapazität & Umweltindex der Anlagen"
+  "major": "B) Kapazität & Umweltindex der Anlagen",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -945,7 +1061,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Typ A Nr. 2",
   "col_label": 0.97,
   "value": 0.97,
-  "section": "B) Kapazität & Umweltindex der Anlagen"
+  "major": "B) Kapazität & Umweltindex der Anlagen",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -953,7 +1070,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Typ A Nr. 2",
   "col_label": 1,
   "value": 1,
-  "section": "B) Kapazität & Umweltindex der Anlagen"
+  "major": "B) Kapazität & Umweltindex der Anlagen",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -961,7 +1079,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Typ A Nr. 3",
   "col_label": null,
   "value": 11500,
-  "section": "B) Kapazität & Umweltindex der Anlagen"
+  "major": "B) Kapazität & Umweltindex der Anlagen",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -969,7 +1088,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Typ A Nr. 3",
   "col_label": 1.5,
   "value": 1.5,
-  "section": "B) Kapazität & Umweltindex der Anlagen"
+  "major": "B) Kapazität & Umweltindex der Anlagen",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -977,7 +1097,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Typ A Nr. 3",
   "col_label": 0.97,
   "value": 0.97,
-  "section": "B) Kapazität & Umweltindex der Anlagen"
+  "major": "B) Kapazität & Umweltindex der Anlagen",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -985,7 +1106,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Typ A Nr. 3",
   "col_label": 1,
   "value": 1,
-  "section": "B) Kapazität & Umweltindex der Anlagen"
+  "major": "B) Kapazität & Umweltindex der Anlagen",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -993,7 +1115,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Typ A Nr. 4",
   "col_label": null,
   "value": 13500,
-  "section": "B) Kapazität & Umweltindex der Anlagen"
+  "major": "B) Kapazität & Umweltindex der Anlagen",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -1001,7 +1124,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Typ A Nr. 4",
   "col_label": 1.5,
   "value": 1.5,
-  "section": "B) Kapazität & Umweltindex der Anlagen"
+  "major": "B) Kapazität & Umweltindex der Anlagen",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -1009,7 +1133,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Typ A Nr. 4",
   "col_label": 0.97,
   "value": 0.97,
-  "section": "B) Kapazität & Umweltindex der Anlagen"
+  "major": "B) Kapazität & Umweltindex der Anlagen",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -1017,7 +1142,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Typ A Nr. 4",
   "col_label": 1,
   "value": 1,
-  "section": "B) Kapazität & Umweltindex der Anlagen"
+  "major": "B) Kapazität & Umweltindex der Anlagen",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -1025,7 +1151,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Umweltbelastungsindikator des Unternehmens (Periode 0)",
   "col_label": null,
   "value": 93.27,
-  "section": "D) Referenz: Umweltindex der Fertigungsanlagen → Abgabe an Umweltbehörde"
+  "major": "D) Referenz: Umweltindex der Fertigungsanlagen → Abgabe an Umweltbehörde",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -1033,7 +1160,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Umweltbelastungsindikator des Unternehmens (Periode 0)",
   "col_label": null,
   "value": 1.35,
-  "section": "D) Referenz: Umweltindex der Fertigungsanlagen → Abgabe an Umweltbehörde"
+  "major": "D) Referenz: Umweltindex der Fertigungsanlagen → Abgabe an Umweltbehörde",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -1041,7 +1169,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Geplante Fertigungsmenge (Stück)",
   "col_label": null,
   "value": 40000,
-  "section": "E) Auslastung Fertigungsanlagen – Copy Classic"
+  "major": "E) Auslastung Fertigungsanlagen – Copy Classic",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -1049,7 +1178,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Tatsächliche Fertigungsmenge (Stück)",
   "col_label": null,
   "value": 40000,
-  "section": "E) Auslastung Fertigungsanlagen – Copy Classic"
+  "major": "E) Auslastung Fertigungsanlagen – Copy Classic",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -1057,7 +1187,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Benötigte Anlagenkapazität pro Fertigprodukt",
   "col_label": null,
   "value": 1,
-  "section": "E) Auslastung Fertigungsanlagen – Copy Classic"
+  "major": "E) Auslastung Fertigungsanlagen – Copy Classic",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -1065,7 +1196,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Personalbestand Fertigung",
   "col_label": null,
   "value": 852,
-  "section": "F) Fertigungspersonal – Bestand & Fehlzeiten"
+  "major": "F) Fertigungspersonal – Bestand & Fehlzeiten",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -1073,7 +1205,8 @@ _INPUTS_META_JSON = r'''[
   "label": "- Fehlzeiten",
   "col_label": null,
   "value": 47,
-  "section": "F) Fertigungspersonal – Bestand & Fehlzeiten"
+  "major": "F) Fertigungspersonal – Bestand & Fehlzeiten",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -1081,7 +1214,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Grundproduktivität (Stück/Mitarbeiter/Periode)",
   "col_label": null,
   "value": 50,
-  "section": "G) Produktivität der Fertigungsmitarbeiter"
+  "major": "G) Produktivität der Fertigungsmitarbeiter",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -1089,7 +1223,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Neue Mitarbeiter (%)",
   "col_label": null,
   "value": 0.0586,
-  "section": "G) Produktivität der Fertigungsmitarbeiter"
+  "major": "G) Produktivität der Fertigungsmitarbeiter",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -1097,7 +1232,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Trainingsausgaben pro Mitarbeiter (EUR)",
   "col_label": null,
   "value": 1000,
-  "section": "G) Produktivität der Fertigungsmitarbeiter"
+  "major": "G) Produktivität der Fertigungsmitarbeiter",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -1105,7 +1241,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Mitarbeitermotivation (Index)",
   "col_label": null,
   "value": 56.47,
-  "section": "G) Produktivität der Fertigungsmitarbeiter"
+  "major": "G) Produktivität der Fertigungsmitarbeiter",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -1113,7 +1250,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Prozessoptimierungsausgaben (MEUR)",
   "col_label": null,
   "value": 0,
-  "section": "G) Produktivität der Fertigungsmitarbeiter"
+  "major": "G) Produktivität der Fertigungsmitarbeiter",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -1121,7 +1259,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Einarbeitungsindex",
   "col_label": null,
   "value": 1,
-  "section": "G) Produktivität der Fertigungsmitarbeiter"
+  "major": "G) Produktivität der Fertigungsmitarbeiter",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -1129,7 +1268,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Prozessoptimierungsindex",
   "col_label": null,
   "value": 1,
-  "section": "G) Produktivität der Fertigungsmitarbeiter"
+  "major": "G) Produktivität der Fertigungsmitarbeiter",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -1137,7 +1277,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Personalqualifizierungsindex",
   "col_label": null,
   "value": 1,
-  "section": "G) Produktivität der Fertigungsmitarbeiter"
+  "major": "G) Produktivität der Fertigungsmitarbeiter",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -1145,7 +1286,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Motivationsindex",
   "col_label": null,
   "value": 1,
-  "section": "G) Produktivität der Fertigungsmitarbeiter"
+  "major": "G) Produktivität der Fertigungsmitarbeiter",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -1153,7 +1295,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Kumulierte Fertigung bis Vorperiode (Stück)",
   "col_label": null,
   "value": 0,
-  "section": "G) Produktivität der Fertigungsmitarbeiter"
+  "major": "G) Produktivität der Fertigungsmitarbeiter",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -1161,7 +1304,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Produktivitätsindex II (Lernkurve)",
   "col_label": null,
   "value": 1,
-  "section": "G) Produktivität der Fertigungsmitarbeiter"
+  "major": "G) Produktivität der Fertigungsmitarbeiter",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -1169,7 +1313,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Fertigungskapazität pro Mitarbeiter (Stück/Periode)",
   "col_label": null,
   "value": 50.02,
-  "section": "H) Auslastung Fertigungsmitarbeiter"
+  "major": "H) Auslastung Fertigungsmitarbeiter",
+  "sub": null
  },
  {
   "sheet": "3 Fertigung",
@@ -1177,7 +1322,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Eingesetztes Personal inkl. Überstunden",
   "col_label": null,
   "value": 799.7,
-  "section": "H) Auslastung Fertigungsmitarbeiter"
+  "major": "H) Auslastung Fertigungsmitarbeiter",
+  "sub": null
  },
  {
   "sheet": "4 Personal",
@@ -1185,7 +1331,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Einkauf",
   "col_label": null,
   "value": 18,
-  "section": "A) Personalbestand nach Kostenstelle"
+  "major": "A) Personalbestand nach Kostenstelle",
+  "sub": null
  },
  {
   "sheet": "4 Personal",
@@ -1193,7 +1340,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Einkauf",
   "col_label": "​+ Einstellungen",
   "value": 1,
-  "section": "A) Personalbestand nach Kostenstelle"
+  "major": "A) Personalbestand nach Kostenstelle",
+  "sub": null
  },
  {
   "sheet": "4 Personal",
@@ -1201,7 +1349,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Einkauf",
   "col_label": "​- Entlassungen",
   "value": 0,
-  "section": "A) Personalbestand nach Kostenstelle"
+  "major": "A) Personalbestand nach Kostenstelle",
+  "sub": null
  },
  {
   "sheet": "4 Personal",
@@ -1209,7 +1358,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Einkauf",
   "col_label": "​- Fluktuation",
   "value": 1,
-  "section": "A) Personalbestand nach Kostenstelle"
+  "major": "A) Personalbestand nach Kostenstelle",
+  "sub": null
  },
  {
   "sheet": "4 Personal",
@@ -1217,7 +1367,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Verwaltung",
   "col_label": null,
   "value": 200,
-  "section": "A) Personalbestand nach Kostenstelle"
+  "major": "A) Personalbestand nach Kostenstelle",
+  "sub": null
  },
  {
   "sheet": "4 Personal",
@@ -1225,7 +1376,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Verwaltung",
   "col_label": 1,
   "value": 16,
-  "section": "A) Personalbestand nach Kostenstelle"
+  "major": "A) Personalbestand nach Kostenstelle",
+  "sub": null
  },
  {
   "sheet": "4 Personal",
@@ -1233,7 +1385,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Verwaltung",
   "col_label": "​- Entlassungen",
   "value": 0,
-  "section": "A) Personalbestand nach Kostenstelle"
+  "major": "A) Personalbestand nach Kostenstelle",
+  "sub": null
  },
  {
   "sheet": "4 Personal",
@@ -1241,7 +1394,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Verwaltung",
   "col_label": 1,
   "value": 8,
-  "section": "A) Personalbestand nach Kostenstelle"
+  "major": "A) Personalbestand nach Kostenstelle",
+  "sub": null
  },
  {
   "sheet": "4 Personal",
@@ -1249,7 +1403,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Fertigung",
   "col_label": null,
   "value": 853,
-  "section": "A) Personalbestand nach Kostenstelle"
+  "major": "A) Personalbestand nach Kostenstelle",
+  "sub": null
  },
  {
   "sheet": "4 Personal",
@@ -1257,7 +1412,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Fertigung",
   "col_label": 16,
   "value": 50,
-  "section": "A) Personalbestand nach Kostenstelle"
+  "major": "A) Personalbestand nach Kostenstelle",
+  "sub": null
  },
  {
   "sheet": "4 Personal",
@@ -1265,7 +1421,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Fertigung",
   "col_label": "​- Entlassungen",
   "value": 0,
-  "section": "A) Personalbestand nach Kostenstelle"
+  "major": "A) Personalbestand nach Kostenstelle",
+  "sub": null
  },
  {
   "sheet": "4 Personal",
@@ -1273,7 +1430,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Fertigung",
   "col_label": 8,
   "value": 51,
-  "section": "A) Personalbestand nach Kostenstelle"
+  "major": "A) Personalbestand nach Kostenstelle",
+  "sub": null
  },
  {
   "sheet": "4 Personal",
@@ -1281,7 +1439,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Forschung & Entwicklung",
   "col_label": null,
   "value": 34,
-  "section": "A) Personalbestand nach Kostenstelle"
+  "major": "A) Personalbestand nach Kostenstelle",
+  "sub": null
  },
  {
   "sheet": "4 Personal",
@@ -1289,7 +1448,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Forschung & Entwicklung",
   "col_label": 50,
   "value": 2,
-  "section": "A) Personalbestand nach Kostenstelle"
+  "major": "A) Personalbestand nach Kostenstelle",
+  "sub": null
  },
  {
   "sheet": "4 Personal",
@@ -1297,7 +1457,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Forschung & Entwicklung",
   "col_label": "​- Entlassungen",
   "value": 0,
-  "section": "A) Personalbestand nach Kostenstelle"
+  "major": "A) Personalbestand nach Kostenstelle",
+  "sub": null
  },
  {
   "sheet": "4 Personal",
@@ -1305,7 +1466,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Forschung & Entwicklung",
   "col_label": 51,
   "value": 1,
-  "section": "A) Personalbestand nach Kostenstelle"
+  "major": "A) Personalbestand nach Kostenstelle",
+  "sub": null
  },
  {
   "sheet": "4 Personal",
@@ -1313,7 +1475,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Vertrieb",
   "col_label": null,
   "value": 100,
-  "section": "A) Personalbestand nach Kostenstelle"
+  "major": "A) Personalbestand nach Kostenstelle",
+  "sub": null
  },
  {
   "sheet": "4 Personal",
@@ -1321,7 +1484,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Vertrieb",
   "col_label": 2,
   "value": 9,
-  "section": "A) Personalbestand nach Kostenstelle"
+  "major": "A) Personalbestand nach Kostenstelle",
+  "sub": null
  },
  {
   "sheet": "4 Personal",
@@ -1329,7 +1493,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Vertrieb",
   "col_label": "​- Entlassungen",
   "value": 0,
-  "section": "A) Personalbestand nach Kostenstelle"
+  "major": "A) Personalbestand nach Kostenstelle",
+  "sub": null
  },
  {
   "sheet": "4 Personal",
@@ -1337,7 +1502,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Vertrieb",
   "col_label": 1,
   "value": 9,
-  "section": "A) Personalbestand nach Kostenstelle"
+  "major": "A) Personalbestand nach Kostenstelle",
+  "sub": null
  },
  {
   "sheet": "4 Personal",
@@ -1345,7 +1511,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Einkauf",
   "col_label": null,
   "value": 0.54,
-  "section": "B) Personalkosten nach Kostenstelle (MEUR)"
+  "major": "B) Personalkosten nach Kostenstelle (MEUR)",
+  "sub": null
  },
  {
   "sheet": "4 Personal",
@@ -1353,7 +1520,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Einkauf",
   "col_label": "​+ Einstellungen/Entlassungen/Training",
   "value": 0.01,
-  "section": "B) Personalkosten nach Kostenstelle (MEUR)"
+  "major": "B) Personalkosten nach Kostenstelle (MEUR)",
+  "sub": null
  },
  {
   "sheet": "4 Personal",
@@ -1361,7 +1529,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Einkauf",
   "col_label": "​+ Personalnebenkosten",
   "value": 0.22,
-  "section": "B) Personalkosten nach Kostenstelle (MEUR)"
+  "major": "B) Personalkosten nach Kostenstelle (MEUR)",
+  "sub": null
  },
  {
   "sheet": "4 Personal",
@@ -1369,7 +1538,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Einkauf",
   "col_label": "​+ Pensionsrückstellungen",
   "value": 0.03,
-  "section": "B) Personalkosten nach Kostenstelle (MEUR)"
+  "major": "B) Personalkosten nach Kostenstelle (MEUR)",
+  "sub": null
  },
  {
   "sheet": "4 Personal",
@@ -1377,7 +1547,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Verwaltung",
   "col_label": null,
   "value": 5.82,
-  "section": "B) Personalkosten nach Kostenstelle (MEUR)"
+  "major": "B) Personalkosten nach Kostenstelle (MEUR)",
+  "sub": null
  },
  {
   "sheet": "4 Personal",
@@ -1385,7 +1556,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Verwaltung",
   "col_label": 0.01,
   "value": 0.2,
-  "section": "B) Personalkosten nach Kostenstelle (MEUR)"
+  "major": "B) Personalkosten nach Kostenstelle (MEUR)",
+  "sub": null
  },
  {
   "sheet": "4 Personal",
@@ -1393,7 +1565,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Verwaltung",
   "col_label": 0.22,
   "value": 2.33,
-  "section": "B) Personalkosten nach Kostenstelle (MEUR)"
+  "major": "B) Personalkosten nach Kostenstelle (MEUR)",
+  "sub": null
  },
  {
   "sheet": "4 Personal",
@@ -1401,7 +1574,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Verwaltung",
   "col_label": 0.03,
   "value": 0.29,
-  "section": "B) Personalkosten nach Kostenstelle (MEUR)"
+  "major": "B) Personalkosten nach Kostenstelle (MEUR)",
+  "sub": null
  },
  {
   "sheet": "4 Personal",
@@ -1409,7 +1583,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Fertigung",
   "col_label": null,
   "value": 25.56,
-  "section": "B) Personalkosten nach Kostenstelle (MEUR)"
+  "major": "B) Personalkosten nach Kostenstelle (MEUR)",
+  "sub": null
  },
  {
   "sheet": "4 Personal",
@@ -1417,7 +1592,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Fertigung",
   "col_label": 0.2,
   "value": 1.48,
-  "section": "B) Personalkosten nach Kostenstelle (MEUR)"
+  "major": "B) Personalkosten nach Kostenstelle (MEUR)",
+  "sub": null
  },
  {
   "sheet": "4 Personal",
@@ -1425,7 +1601,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Fertigung",
   "col_label": 2.33,
   "value": 10.22,
-  "section": "B) Personalkosten nach Kostenstelle (MEUR)"
+  "major": "B) Personalkosten nach Kostenstelle (MEUR)",
+  "sub": null
  },
  {
   "sheet": "4 Personal",
@@ -1433,7 +1610,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Fertigung",
   "col_label": 0.29,
   "value": 1.28,
-  "section": "B) Personalkosten nach Kostenstelle (MEUR)"
+  "major": "B) Personalkosten nach Kostenstelle (MEUR)",
+  "sub": null
  },
  {
   "sheet": "4 Personal",
@@ -1441,7 +1619,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Forschung & Entwicklung",
   "col_label": null,
   "value": 1.54,
-  "section": "B) Personalkosten nach Kostenstelle (MEUR)"
+  "major": "B) Personalkosten nach Kostenstelle (MEUR)",
+  "sub": null
  },
  {
   "sheet": "4 Personal",
@@ -1449,7 +1628,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Forschung & Entwicklung",
   "col_label": 1.48,
   "value": 0.03,
-  "section": "B) Personalkosten nach Kostenstelle (MEUR)"
+  "major": "B) Personalkosten nach Kostenstelle (MEUR)",
+  "sub": null
  },
  {
   "sheet": "4 Personal",
@@ -1457,7 +1637,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Forschung & Entwicklung",
   "col_label": 10.22,
   "value": 0.62,
-  "section": "B) Personalkosten nach Kostenstelle (MEUR)"
+  "major": "B) Personalkosten nach Kostenstelle (MEUR)",
+  "sub": null
  },
  {
   "sheet": "4 Personal",
@@ -1465,7 +1646,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Forschung & Entwicklung",
   "col_label": 1.28,
   "value": 0.08,
-  "section": "B) Personalkosten nach Kostenstelle (MEUR)"
+  "major": "B) Personalkosten nach Kostenstelle (MEUR)",
+  "sub": null
  },
  {
   "sheet": "4 Personal",
@@ -1473,7 +1655,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Vertrieb",
   "col_label": null,
   "value": 4,
-  "section": "B) Personalkosten nach Kostenstelle (MEUR)"
+  "major": "B) Personalkosten nach Kostenstelle (MEUR)",
+  "sub": null
  },
  {
   "sheet": "4 Personal",
@@ -1481,7 +1664,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Vertrieb",
   "col_label": 0.03,
   "value": 0.11,
-  "section": "B) Personalkosten nach Kostenstelle (MEUR)"
+  "major": "B) Personalkosten nach Kostenstelle (MEUR)",
+  "sub": null
  },
  {
   "sheet": "4 Personal",
@@ -1489,7 +1673,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Vertrieb",
   "col_label": 0.62,
   "value": 1.6,
-  "section": "B) Personalkosten nach Kostenstelle (MEUR)"
+  "major": "B) Personalkosten nach Kostenstelle (MEUR)",
+  "sub": null
  },
  {
   "sheet": "4 Personal",
@@ -1497,7 +1682,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Vertrieb",
   "col_label": 0.08,
   "value": 0.2,
-  "section": "B) Personalkosten nach Kostenstelle (MEUR)"
+  "major": "B) Personalkosten nach Kostenstelle (MEUR)",
+  "sub": null
  },
  {
   "sheet": "4 Personal",
@@ -1505,7 +1691,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Trainingsmaßnahmen Fertigung gesamt (MEUR)",
   "col_label": null,
   "value": 0.85,
-  "section": "B) Personalkosten nach Kostenstelle (MEUR)"
+  "major": "B) Personalkosten nach Kostenstelle (MEUR)",
+  "sub": null
  },
  {
   "sheet": "4 Personal",
@@ -1513,7 +1700,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Personalnebenkosten (% der Gehaltssumme)",
   "col_label": null,
   "value": 0.4,
-  "section": "C) Sätze & Parameter"
+  "major": "C) Sätze & Parameter",
+  "sub": null
  },
  {
   "sheet": "4 Personal",
@@ -1521,7 +1709,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Pensionsrückstellung (% der Gehaltssumme)",
   "col_label": null,
   "value": 0.05,
-  "section": "C) Sätze & Parameter"
+  "major": "C) Sätze & Parameter",
+  "sub": null
  },
  {
   "sheet": "4 Personal",
@@ -1529,7 +1718,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Kosten je Neueinstellung (EUR)",
   "col_label": null,
   "value": 12500,
-  "section": "C) Sätze & Parameter"
+  "major": "C) Sätze & Parameter",
+  "sub": null
  },
  {
   "sheet": "4 Personal",
@@ -1537,7 +1727,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Kosten je Entlassung (EUR)",
   "col_label": null,
   "value": 10000,
-  "section": "C) Sätze & Parameter"
+  "major": "C) Sätze & Parameter",
+  "sub": null
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
@@ -1545,7 +1736,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Kurzfristiger Kredit",
   "col_label": null,
   "value": 27,
-  "section": "A) Kredite – Übersicht Periode 0"
+  "major": "A) Kredite – Übersicht Periode 0",
+  "sub": null
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
@@ -1553,7 +1745,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Kurzfristiger Kredit",
   "col_label": "Zinssatz Periode 0",
   "value": 0.08,
-  "section": "A) Kredite – Übersicht Periode 0"
+  "major": "A) Kredite – Übersicht Periode 0",
+  "sub": null
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
@@ -1561,7 +1754,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Langfristiger Kredit",
   "col_label": null,
   "value": 0,
-  "section": "A) Kredite – Übersicht Periode 0"
+  "major": "A) Kredite – Übersicht Periode 0",
+  "sub": null
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
@@ -1569,7 +1763,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Langfristiger Kredit",
   "col_label": 0.08,
   "value": 0.07,
-  "section": "A) Kredite – Übersicht Periode 0"
+  "major": "A) Kredite – Übersicht Periode 0",
+  "sub": null
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
@@ -1577,7 +1772,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Überziehungskredit",
   "col_label": null,
   "value": 0,
-  "section": "A) Kredite – Übersicht Periode 0"
+  "major": "A) Kredite – Übersicht Periode 0",
+  "sub": null
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
@@ -1585,7 +1781,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Überziehungskredit",
   "col_label": 0.07,
   "value": 0.13,
-  "section": "A) Kredite – Übersicht Periode 0"
+  "major": "A) Kredite – Übersicht Periode 0",
+  "sub": null
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
@@ -1593,7 +1790,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Aktuelles Rating (Bonitätsstufe)",
   "col_label": null,
   "value": "BBB",
-  "section": "B) Referenz: Rating → Zinsänderung auf Basiszins der Folgeperiode"
+  "major": "B) Referenz: Rating → Zinsänderung auf Basiszins der Folgeperiode",
+  "sub": null
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
@@ -1601,7 +1799,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Bilanzsumme",
   "col_label": null,
   "value": 72.15,
-  "section": "C) Bilanzkennzahlen (Basis für Rating & Wertorientierte Kennzahlen)"
+  "major": "C) Bilanzkennzahlen (Basis für Rating & Wertorientierte Kennzahlen)",
+  "sub": null
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
@@ -1609,7 +1808,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Bilanzsumme",
   "col_label": "Vorperiode (MEUR)",
   "value": 80,
-  "section": "C) Bilanzkennzahlen (Basis für Rating & Wertorientierte Kennzahlen)"
+  "major": "C) Bilanzkennzahlen (Basis für Rating & Wertorientierte Kennzahlen)",
+  "sub": null
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
@@ -1617,7 +1817,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Eigenkapital",
   "col_label": null,
   "value": 31.27,
-  "section": "C) Bilanzkennzahlen (Basis für Rating & Wertorientierte Kennzahlen)"
+  "major": "C) Bilanzkennzahlen (Basis für Rating & Wertorientierte Kennzahlen)",
+  "sub": null
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
@@ -1625,7 +1826,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Eigenkapital",
   "col_label": 80,
   "value": 28,
-  "section": "C) Bilanzkennzahlen (Basis für Rating & Wertorientierte Kennzahlen)"
+  "major": "C) Bilanzkennzahlen (Basis für Rating & Wertorientierte Kennzahlen)",
+  "sub": null
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
@@ -1633,7 +1835,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Fremdkapital (Pensionsrückstellungen + Verbindlichkeiten)",
   "col_label": null,
   "value": 40.87,
-  "section": "C) Bilanzkennzahlen (Basis für Rating & Wertorientierte Kennzahlen)"
+  "major": "C) Bilanzkennzahlen (Basis für Rating & Wertorientierte Kennzahlen)",
+  "sub": null
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
@@ -1641,7 +1844,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Fremdkapital (Pensionsrückstellungen + Verbindlichkeiten)",
   "col_label": 28,
   "value": 52,
-  "section": "C) Bilanzkennzahlen (Basis für Rating & Wertorientierte Kennzahlen)"
+  "major": "C) Bilanzkennzahlen (Basis für Rating & Wertorientierte Kennzahlen)",
+  "sub": null
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
@@ -1649,7 +1853,8 @@ _INPUTS_META_JSON = r'''[
   "label": "= Fremdkapitalquote",
   "col_label": null,
   "value": 0.5665,
-  "section": "C) Bilanzkennzahlen (Basis für Rating & Wertorientierte Kennzahlen)"
+  "major": "C) Bilanzkennzahlen (Basis für Rating & Wertorientierte Kennzahlen)",
+  "sub": null
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
@@ -1657,7 +1862,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Eigenkapitalrendite",
   "col_label": null,
   "value": 0.1527,
-  "section": "D) Wertorientierte Kennzahlen"
+  "major": "D) Wertorientierte Kennzahlen",
+  "sub": null
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
@@ -1665,7 +1871,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Gewichteter Kapitalkostensatz (WACC)",
   "col_label": null,
   "value": 0.0673,
-  "section": "D) Wertorientierte Kennzahlen"
+  "major": "D) Wertorientierte Kennzahlen",
+  "sub": null
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
@@ -1673,7 +1880,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Net Operating Profit after Tax (NOPAT)",
   "col_label": null,
   "value": 5.46,
-  "section": "D) Wertorientierte Kennzahlen"
+  "major": "D) Wertorientierte Kennzahlen",
+  "sub": null
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
@@ -1681,7 +1889,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Traditioneller Cashflow (CF)",
   "col_label": null,
   "value": 13.3,
-  "section": "D) Wertorientierte Kennzahlen"
+  "major": "D) Wertorientierte Kennzahlen",
+  "sub": null
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
@@ -1689,7 +1898,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Net Working Capital",
   "col_label": null,
   "value": 43.94,
-  "section": "D) Wertorientierte Kennzahlen"
+  "major": "D) Wertorientierte Kennzahlen",
+  "sub": null
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
@@ -1697,7 +1907,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Net Capital Employed (NCE)",
   "col_label": null,
   "value": 71.29,
-  "section": "D) Wertorientierte Kennzahlen"
+  "major": "D) Wertorientierte Kennzahlen",
+  "sub": null
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
@@ -1705,7 +1916,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Free Cashflow",
   "col_label": null,
   "value": 14.35,
-  "section": "D) Wertorientierte Kennzahlen"
+  "major": "D) Wertorientierte Kennzahlen",
+  "sub": null
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
@@ -1713,7 +1925,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Anzahl Aktien",
   "col_label": null,
   "value": 500000,
-  "section": "E) Aktienkurs, Unternehmenswert & Shareholder Earnings"
+  "major": "E) Aktienkurs, Unternehmenswert & Shareholder Earnings",
+  "sub": null
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
@@ -1721,7 +1934,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Aktienkurs",
   "col_label": null,
   "value": 196.91,
-  "section": "E) Aktienkurs, Unternehmenswert & Shareholder Earnings"
+  "major": "E) Aktienkurs, Unternehmenswert & Shareholder Earnings",
+  "sub": null
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
@@ -1729,7 +1943,8 @@ _INPUTS_META_JSON = r'''[
   "label": "Unternehmenswert (laut Bericht TNB17)",
   "col_label": null,
   "value": 98.45,
-  "section": "E) Aktienkurs, Unternehmenswert & Shareholder Earnings"
+  "major": "E) Aktienkurs, Unternehmenswert & Shareholder Earnings",
+  "sub": null
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
@@ -1737,9 +1952,2697 @@ _INPUTS_META_JSON = r'''[
   "label": "Shareholder Earnings kumuliert",
   "col_label": null,
   "value": 0,
-  "section": "E) Aktienkurs, Unternehmenswert & Shareholder Earnings"
+  "major": "E) Aktienkurs, Unternehmenswert & Shareholder Earnings",
+  "sub": null
  }
 ]'''
+
+_STRUCTURE_JSON = r'''{
+ "0 Dashboard": [
+  {
+   "title": "Erfolg & Rendite",
+   "subs": [
+    {
+     "title": null,
+     "rows": [
+      [
+       "Erfolg & Rendite",
+       null,
+       null,
+       null,
+       "Markt & Produktion",
+       null,
+       null
+      ],
+      [
+       "Umsatz Gesamt (MEUR)",
+       null,
+       null,
+       null,
+       "Marktanteil Markt 1",
+       null,
+       null
+      ],
+      [
+       "Betriebsergebnis EBIT (MEUR)",
+       null,
+       null,
+       null,
+       "Tatsächl. Absatz Copy Classic (Stück)",
+       null,
+       null
+      ],
+      [
+       "EBITDA (MEUR)",
+       null,
+       null,
+       null,
+       "Tatsächl. Fertigungsmenge (Stück)",
+       null,
+       null
+      ],
+      [
+       "Periodenüberschuss (MEUR)",
+       null,
+       null,
+       null,
+       "Auslastung Fertigungsanlagen",
+       null,
+       null
+      ],
+      [
+       "Umsatzrendite",
+       null,
+       null,
+       null,
+       "Auslastung Fertigungsmitarbeiter",
+       null,
+       null
+      ],
+      [
+       "Eigenkapitalrendite",
+       null,
+       null,
+       null,
+       "Herstellkosten Copy Classic (EUR/Stück)",
+       null,
+       null
+      ],
+      [
+       "Aktienkurs (EUR)",
+       null,
+       null,
+       null,
+       "Selbstkosten Copy Classic (EUR/Stück)",
+       null,
+       null
+      ],
+      [
+       "Rating (Bonitätsstufe)",
+       null,
+       null,
+       null,
+       "Deckungsbeitrag V / Stück (EUR)",
+       null,
+       null
+      ],
+      [
+       "Eigenkapitalquote",
+       null,
+       null,
+       null,
+       "Kassenendbestand (MEUR)",
+       null,
+       null
+      ],
+      [
+       "Fremdkapitalquote",
+       null,
+       null,
+       null,
+       "Überziehungskredit (MEUR)",
+       null,
+       null
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "1 Absatzplanung": [
+  {
+   "title": "A) Absatzplanung Copy Classic – Markt 1",
+   "subs": [
+    {
+     "title": null,
+     "rows": [
+      [
+       "A) Absatzplanung Copy Classic – Markt 1",
+       null
+      ],
+      [
+       "Position",
+       "Wert"
+      ],
+      [
+       "Wirtschaftswachstum (Konjunktur, %)",
+       0.02
+      ],
+      [
+       "Absatz Vorperiode (Stück)",
+       43000
+      ],
+      [
+       "​= Potentieller Absatz Planperiode (Stück)",
+       null
+      ],
+      [
+       "Geplanter Marktanteil (%)",
+       0.2
+      ],
+      [
+       "​= Geplanter Absatz (Stück)",
+       null
+      ],
+      [
+       "Geplanter Preis (EUR/Stück)",
+       3000
+      ],
+      [
+       "​= Geplanter Umsatz (MEUR)",
+       null
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "2 Finanzen": [
+  {
+   "title": "A) Gewinn- und Verlustrechnung (GuV)",
+   "subs": [
+    {
+     "title": "Gesamtkostenverfahren",
+     "rows": [
+      [
+       "Gesamtkostenverfahren",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Position",
+       "MEUR",
+       "% vom Umsatz",
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Umsatzerlöse",
+       129,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Sonstige Erträge",
+       0,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "​+/- Erhöhung/Verminderung Bestand Fertigerzeugnisse",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "​- Materialaufwand",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "​- Personalaufwand",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Löhne/Gehälter",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Einstellungskosten/Entlassungskosten",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Pensionsrückstellungen",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Sonstige Personalkosten",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "​- Abschreibungen",
+       7.15,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "​- Sonstiger Aufwand",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "​= Betriebsergebnis (EBIT)",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ]
+     ]
+    },
+    {
+     "title": "Umsatzkostenverfahren (Kontrollrechnung)",
+     "rows": [
+      [
+       "Umsatzkostenverfahren (Kontrollrechnung)",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Position",
+       "MEUR",
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Umsatzerlöse",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Sonstige Erträge",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "​- Herstellkosten des Umsatzes",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "​- F&E",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "​- Vertrieb",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "​- Verwaltung",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "​= Betriebsergebnis (Kontrolle)",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Hinweis: Sollte rechnerisch mit dem Betriebsergebnis aus dem Gesamtkostenverfahren übereinstimmen.",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ]
+     ]
+    },
+    {
+     "title": "Periodenüberschuss / -fehlbetrag",
+     "rows": [
+      [
+       "Periodenüberschuss / -fehlbetrag",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Position",
+       "MEUR",
+       "% vom Umsatz",
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Betriebsergebnis (EBIT)",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "​- Finanzergebnis",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "​+ Erträge aus Wertpapieren",
+       0,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "​- Zinsen für kurz-/langfristige Kredite",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "​- Zinsen für Überziehungskredit",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "​= Gewinn vor Steuern",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "​- Steuern auf Einkommen und Ertrag (45%)",
+       3.5,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "​= Periodenüberschuss / -fehlbetrag",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ]
+     ]
+    },
+    {
+     "title": "Ergebnisverwendung",
+     "rows": [
+      [
+       "Ergebnisverwendung",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Position",
+       "MEUR",
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Gewinn-/Verlustvortrag der Vorperiode",
+       3,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "​- Ausschüttung Dividende aktuelle Periode",
+       1,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "​= Verbleibender Gewinn-/Verlustvortrag",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "​+ Periodenüberschuss/-fehlbetrag",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "​= Gewinn-/Verlustvortrag (neu)",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "EBITDA (= EBIT + Abschreibungen)",
+       null,
+       null,
+       "EBITDA-Marge",
+       null,
+       null,
+       null
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "title": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)",
+   "subs": [
+    {
+     "title": "Deckungsbeitragsrechnung pro Stück (EUR, Markt 1 / Durchschnitt)",
+     "rows": [
+      [
+       "Deckungsbeitragsrechnung pro Stück (EUR, Markt 1 / Durchschnitt)",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Position",
+       "Preis/Stück Markt 1 (EUR)",
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Preis Markt 1",
+       3000,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "​- Var. Materialkosten/Stück",
+       575.56,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "​- Var. Fertigungskosten/Stück",
+       897.81,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "​- Transportkosten/Stück",
+       25,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "​= DB I / Stück",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "...",
+       "siehe Sammelbericht TNB10 (DB II–V analog gestuft)",
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "​= DB V / Stück (Periode 0)",
+       230.98,
+       null,
+       null,
+       null,
+       null,
+       null
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "title": "C) Kostenträgerrechnung – Copy Classic",
+   "subs": [
+    {
+     "title": "Gesamt (MEUR)",
+     "rows": [
+      [
+       "Gesamt (MEUR)",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Kostenstelle / Allokation",
+       "Copy Classic",
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "​+ Einkauf Einzelkosten",
+       23.09,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "​+ Einkauf Gemeinkosten",
+       1.56,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "​+ Fertigung Einzelkosten",
+       36.01,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "​+ Fertigung Gemeinkosten",
+       21.43,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "​= Herstellkosten",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "​+/- Bestandsveränderung Fertigprodukte",
+       5.93,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "​= Herstellkosten des Umsatzes",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "​+ F&E Einzelkosten",
+       3.5,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "​+ F&E Gemeinkosten",
+       2.27,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "​+ Vertrieb Einzelkosten",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "​+ Vertrieb Gemeinkosten",
+       8.53,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "​+ Verwaltung Einzelkosten",
+       0,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "​+ Verwaltung Gemeinkosten",
+       9.68,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "​= Selbstkosten",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ]
+     ]
+    },
+    {
+     "title": "Pro Stück (EUR) – bezogen auf Fertigungs- bzw. Absatzmenge",
+     "rows": [
+      [
+       "Pro Stück (EUR) – bezogen auf Fertigungs- bzw. Absatzmenge",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Position",
+       "EUR/Stück",
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Fertigungsmenge (Stück)",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Absatzmenge (Stück)",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "​= Herstellkosten/Stück",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "​= Herstellkosten des Umsatzes/Stück",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "​= Selbstkosten/Stück",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "title": "D) Liquiditätsrechnung",
+   "subs": [
+    {
+     "title": null,
+     "rows": [
+      [
+       "D) Liquiditätsrechnung",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Position",
+       "MEUR",
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Kassenanfangsbestand",
+       0.5,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Einzahlungen aus Umsatz aktuelle Periode",
+       103.2,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Einzahlungen aus Umsatz Vorperiode",
+       17.84,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Verkauf von Wertpapieren",
+       0,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Zinserträge",
+       0,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Sonstige Einzahlungen/Kapitalerhöhung",
+       0,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Desinvestitionen Fertigungsanlagen",
+       0,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Aufnahme kurz-/langfristige Kredite",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Erlös Sondermarkt",
+       0,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Überziehungskredit",
+       0,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "​= Summe Einzahlungen",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Einsatzstoffe/Betriebsstoffe/Fertigerzeugnisse",
+       18.5,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Einkauf Vorperiode",
+       0,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Personalkosten (ohne BAV)",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Sonstige Aufwendungen",
+       26.75,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Rückzahlung kurzfr. Kredite & Überziehungskredit",
+       40,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Zinsaufwand kurz-/langfristige Kredite",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Kauf von Fertigungsanlagen",
+       0,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Kauf von Wertpapieren",
+       0,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Kauf von Umweltanlagen",
+       1.5,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Auszahlung Dividende",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Sonstige Auszahlungen",
+       0,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Steuern auf Einkommen und Ertrag",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Zinszahlung Überziehungskredit",
+       0,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "​= Summe Auszahlungen",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "​= Kassenendbestand",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "3 Fertigung": [
+  {
+   "title": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)",
+   "subs": [
+    {
+     "title": "Summe / Ø Umweltindex",
+     "rows": [
+      [
+       "Summe / Ø Umweltindex",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "title": "B) Kapazität & Umweltindex der Anlagen",
+   "subs": [
+    {
+     "title": null,
+     "rows": [
+      [
+       "B) Kapazität & Umweltindex der Anlagen",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Anlage",
+       "Normale Kapazität (Stück)",
+       "Instandhaltung (MEUR)",
+       "Verfügbarkeitsgrad (Faktor)",
+       "Rationalisierung (Faktor)",
+       "Verfügbare Kapazität (Stück)",
+       null
+      ],
+      [
+       "Typ A Nr. 1",
+       8000,
+       1.5,
+       0.97,
+       1,
+       null,
+       null
+      ],
+      [
+       "Typ A Nr. 2",
+       9000,
+       1.5,
+       0.97,
+       1,
+       null,
+       null
+      ],
+      [
+       "Typ A Nr. 3",
+       11500,
+       1.5,
+       0.97,
+       1,
+       null,
+       null
+      ],
+      [
+       "Typ A Nr. 4",
+       13500,
+       1.5,
+       0.97,
+       1,
+       null,
+       null
+      ],
+      [
+       "Summe",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "title": "C) Referenz: Instandhaltungsbudget → Verfügbarkeitsgrad (pro Anlage/Periode)",
+   "subs": [
+    {
+     "title": null,
+     "rows": [
+      [
+       "C) Referenz: Instandhaltungsbudget → Verfügbarkeitsgrad (pro Anlage/Periode)",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Instandhaltung (MEUR/Periode/Anlage)",
+       "Verfügbarkeitsgrad der normalen Kapazität",
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       0.1,
+       0.5,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       0.5,
+       0.7,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       0.7,
+       0.8,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       1,
+       0.95,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       1.5,
+       0.97,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       3,
+       0.99,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       4,
+       1,
+       null,
+       null,
+       null,
+       null,
+       null
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "title": "D) Referenz: Umweltindex der Fertigungsanlagen → Abgabe an Umweltbehörde",
+   "subs": [
+    {
+     "title": null,
+     "rows": [
+      [
+       "D) Referenz: Umweltindex der Fertigungsanlagen → Abgabe an Umweltbehörde",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Umweltindex der Anlagen (Ø)",
+       "Abgabe an Umweltbehörde (MEUR)",
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       85,
+       5,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       90,
+       2.5,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       92.5,
+       1.5,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       95,
+       1,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       98,
+       0.5,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       100,
+       0,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Umweltbelastungsindikator des Unternehmens (Periode 0)",
+       93.27,
+       null,
+       "Abgabe an Umweltbehörde Periode 0 (MEUR)",
+       null,
+       1.35,
+       null
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "title": "E) Auslastung Fertigungsanlagen – Copy Classic",
+   "subs": [
+    {
+     "title": null,
+     "rows": [
+      [
+       "E) Auslastung Fertigungsanlagen – Copy Classic",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Kennzahl",
+       "Wert",
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Geplante Fertigungsmenge (Stück)",
+       40000,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Kapazität der Anlagen ohne Überstunden (Stück)",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Verfügbare Kapazität inkl. Überstunden (max. +10%, Stück)",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Tatsächliche Fertigungsmenge (Stück)",
+       40000,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Benötigte Anlagenkapazität pro Fertigprodukt",
+       1,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Benötigte Anlagenkapazität gesamt (Stück)",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "​= Auslastung Anlagen (%)",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "title": "F) Fertigungspersonal – Bestand & Fehlzeiten",
+   "subs": [
+    {
+     "title": null,
+     "rows": [
+      [
+       "F) Fertigungspersonal – Bestand & Fehlzeiten",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Kennzahl",
+       "Wert",
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Personalbestand Fertigung",
+       852,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "​- Fehlzeiten",
+       47,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "​= Einsetzbares Personal",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "title": "G) Produktivität der Fertigungsmitarbeiter",
+   "subs": [
+    {
+     "title": null,
+     "rows": [
+      [
+       "G) Produktivität der Fertigungsmitarbeiter",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Kennzahl",
+       "Wert",
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Grundproduktivität (Stück/Mitarbeiter/Periode)",
+       50,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Neue Mitarbeiter (%)",
+       0.0586,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Trainingsausgaben pro Mitarbeiter (EUR)",
+       1000,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Mitarbeitermotivation (Index)",
+       56.47,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Prozessoptimierungsausgaben (MEUR)",
+       0,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Einarbeitungsindex",
+       1,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Prozessoptimierungsindex",
+       1,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Personalqualifizierungsindex",
+       1,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Motivationsindex",
+       1,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "​= Produktivitätsindex I",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Kumulierte Fertigung bis Vorperiode (Stück)",
+       0,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Produktivitätsindex II (Lernkurve)",
+       1,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "​= Tatsächliche Produktivität (Stück/MA)",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "title": "H) Auslastung Fertigungsmitarbeiter",
+   "subs": [
+    {
+     "title": null,
+     "rows": [
+      [
+       "H) Auslastung Fertigungsmitarbeiter",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Kennzahl",
+       "Wert",
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Einsetzbares Personal ohne Überstunden",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Einsetzbares Personal inkl. Überstunden (max. +10%)",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Fertigungskapazität pro Mitarbeiter (Stück/Periode)",
+       50.02,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Tatsächliche Fertigungsmenge (Stück)",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Eingesetztes Personal inkl. Überstunden",
+       799.7,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "​= Auslastung Mitarbeiter (%)",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "4 Personal": [
+  {
+   "title": "A) Personalbestand nach Kostenstelle",
+   "subs": [
+    {
+     "title": null,
+     "rows": [
+      [
+       "A) Personalbestand nach Kostenstelle",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Kostenstelle",
+       "Anfangsbestand",
+       "​+ Einstellungen",
+       "​- Entlassungen",
+       "​- Fluktuation",
+       "​= Endbestand",
+       null
+      ],
+      [
+       "Einkauf",
+       18,
+       1,
+       0,
+       1,
+       null,
+       null
+      ],
+      [
+       "Verwaltung",
+       200,
+       16,
+       0,
+       8,
+       null,
+       null
+      ],
+      [
+       "Fertigung",
+       853,
+       50,
+       0,
+       51,
+       null,
+       null
+      ],
+      [
+       "Forschung & Entwicklung",
+       34,
+       2,
+       0,
+       1,
+       null,
+       null
+      ],
+      [
+       "Vertrieb",
+       100,
+       9,
+       0,
+       9,
+       null,
+       null
+      ],
+      [
+       "Gesamt",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "title": "B) Personalkosten nach Kostenstelle (MEUR)",
+   "subs": [
+    {
+     "title": null,
+     "rows": [
+      [
+       "B) Personalkosten nach Kostenstelle (MEUR)",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Kostenstelle",
+       "Löhne/Gehälter",
+       "​+ Einstellungen/Entlassungen/Training",
+       "​+ Personalnebenkosten",
+       "​+ Pensionsrückstellungen",
+       "​= Gesamtaufwand",
+       null
+      ],
+      [
+       "Einkauf",
+       0.54,
+       0.01,
+       0.22,
+       0.03,
+       null,
+       null
+      ],
+      [
+       "Verwaltung",
+       5.82,
+       0.2,
+       2.33,
+       0.29,
+       null,
+       null
+      ],
+      [
+       "Fertigung",
+       25.56,
+       1.48,
+       10.22,
+       1.28,
+       null,
+       null
+      ],
+      [
+       "Forschung & Entwicklung",
+       1.54,
+       0.03,
+       0.62,
+       0.08,
+       null,
+       null
+      ],
+      [
+       "Vertrieb",
+       4,
+       0.11,
+       1.6,
+       0.2,
+       null,
+       null
+      ],
+      [
+       "Gesamt Personalkosten",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Trainingsmaßnahmen Fertigung gesamt (MEUR)",
+       0.85,
+       null,
+       null,
+       null,
+       null,
+       null
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "title": "C) Sätze & Parameter",
+   "subs": [
+    {
+     "title": null,
+     "rows": [
+      [
+       "C) Sätze & Parameter",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Parameter",
+       "Wert",
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Personalnebenkosten (% der Gehaltssumme)",
+       0.4,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Gesetzlicher Mindestsatz Personalnebenkosten",
+       0.37,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Pensionsrückstellung (% der Gehaltssumme)",
+       0.05,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Kosten je Neueinstellung (EUR)",
+       12500,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Kosten je Entlassung (EUR)",
+       10000,
+       null,
+       null,
+       null,
+       null,
+       null
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "title": "D) Referenz: Sozialplan-Spektrum (bei Entlassungen > 10% des Anfangsbestandes einer Abteilung)",
+   "subs": [
+    {
+     "title": null,
+     "rows": [
+      [
+       "D) Referenz: Sozialplan-Spektrum (bei Entlassungen > 10% des Anfangsbestandes einer Abteilung)",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Entlassungen (% vom Personalanfangsbestand)",
+       "Sozialplankosten pro Entlassung (EUR)",
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "10% – 19,99%",
+       15000,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "20% – 39,99%",
+       20000,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "40% – 100%",
+       25000,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "In Periode 0 wurden keine Entlassungen vorgenommen (nur Fluktuation) – Sozialplankosten = 0 MEUR.",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "title": "E) Produktivitäts-Einflussfaktoren (Verweis Sheet \"3 Fertigung\")",
+   "subs": [
+    {
+     "title": null,
+     "rows": [
+      [
+       "E) Produktivitäts-Einflussfaktoren (Verweis Sheet \"3 Fertigung\")",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Kennzahl",
+       "Wert",
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Produktivitätsindex I",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Produktivitätsindex II (Lernkurve)",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Mitarbeitermotivation (Index)",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "title": "F) Referenz: Personalbedarf Einkauf & Verwaltung in Abhängigkeit vom Umsatz",
+   "subs": [
+    {
+     "title": null,
+     "rows": [
+      [
+       "F) Referenz: Personalbedarf Einkauf & Verwaltung in Abhängigkeit vom Umsatz",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Umsatz Copy Classic (MEUR)",
+       "Personalbedarf Einkauf",
+       "Personalbedarf Verwaltung",
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       50,
+       10,
+       150,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       75,
+       14,
+       170,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       100,
+       16,
+       190,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       125,
+       18,
+       200,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       150,
+       20,
+       215,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       175,
+       21,
+       228,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       200,
+       22,
+       240,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       250,
+       24,
+       260,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Tatsächlicher Umsatz Periode 0 = 129 MEUR → Personalbedarf liegt zwischen den Stützpunkten 100 und 125 MEUR (nicht-linearer Zusammenhang, siehe Teilnehmerhandbuch 3.5.2).",
+       null,
+       null,
+       null,
+       null,
+       null,
+       null
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "5 Kredite & Aktienkurs": [
+  {
+   "title": "A) Kredite – Übersicht Periode 0",
+   "subs": [
+    {
+     "title": "Summe Zinsaufwand",
+     "rows": [
+      [
+       "Summe Zinsaufwand",
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       null,
+       null,
+       null,
+       "(vgl. GuV Finanzergebnis)",
+       null,
+       null
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "title": "B) Referenz: Rating → Zinsänderung auf Basiszins der Folgeperiode",
+   "subs": [
+    {
+     "title": null,
+     "rows": [
+      [
+       "B) Referenz: Rating → Zinsänderung auf Basiszins der Folgeperiode",
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Ratingklasse",
+       "Zinsänderung",
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "AAA",
+       -0.04,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "AA",
+       -0.03,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "A",
+       -0.02,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "BBB",
+       -0.01,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "BB",
+       0,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "B",
+       0.01,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "CCC",
+       0.02,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "CC",
+       0.03,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "C",
+       0.04,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "D",
+       0.05,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Aktuelles Rating (Bonitätsstufe)",
+       "BBB",
+       "Einflussfaktoren: Eigenkapitalquote, Eigenkapital, Free Cashflow/Finanzschulden, Überziehungskredit, Kundenzufriedenheit, Periodenüberschuss, Planungsqualität, Produktivität, Produktqualität.",
+       null,
+       null,
+       null
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "title": "C) Bilanzkennzahlen (Basis für Rating & Wertorientierte Kennzahlen)",
+   "subs": [
+    {
+     "title": null,
+     "rows": [
+      [
+       "C) Bilanzkennzahlen (Basis für Rating & Wertorientierte Kennzahlen)",
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Position",
+       "Aktuelle Periode (MEUR)",
+       "Vorperiode (MEUR)",
+       null,
+       null,
+       null
+      ],
+      [
+       "Bilanzsumme",
+       72.15,
+       80,
+       null,
+       null,
+       null
+      ],
+      [
+       "Eigenkapital",
+       31.27,
+       28,
+       null,
+       null,
+       null
+      ],
+      [
+       "Fremdkapital (Pensionsrückstellungen + Verbindlichkeiten)",
+       40.87,
+       52,
+       null,
+       null,
+       null
+      ],
+      [
+       "​= Eigenkapitalquote",
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "​= Fremdkapitalquote",
+       0.5665,
+       null,
+       null,
+       null,
+       null
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "title": "D) Wertorientierte Kennzahlen",
+   "subs": [
+    {
+     "title": null,
+     "rows": [
+      [
+       "D) Wertorientierte Kennzahlen",
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Kennzahl",
+       "Wert",
+       "Einheit",
+       null,
+       null,
+       null
+      ],
+      [
+       "Eigenkapitalrendite",
+       0.1527,
+       "%",
+       null,
+       null,
+       null
+      ],
+      [
+       "Gewichteter Kapitalkostensatz (WACC)",
+       0.0673,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Net Operating Profit after Tax (NOPAT)",
+       5.46,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Traditioneller Cashflow (CF)",
+       13.3,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Net Working Capital",
+       43.94,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Net Capital Employed (NCE)",
+       71.29,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "​= Return on Net Capital Employed (ROCE = NOPAT/NCE)",
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "​= Economic Value Added (EVA = NOPAT − WACC × NCE)",
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Cashflow Return on Investment (CF/NCE)",
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "EBIT",
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "EBITDA",
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "EBITDA-Marge",
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Free Cashflow",
+       14.35,
+       null,
+       null,
+       null,
+       null
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "title": "E) Aktienkurs, Unternehmenswert & Shareholder Earnings",
+   "subs": [
+    {
+     "title": null,
+     "rows": [
+      [
+       "E) Aktienkurs, Unternehmenswert & Shareholder Earnings",
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Kennzahl",
+       "Wert",
+       "Einheit",
+       null,
+       null,
+       null
+      ],
+      [
+       "Anzahl Aktien",
+       500000,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Aktienkurs",
+       196.91,
+       "EUR",
+       null,
+       null,
+       null
+      ],
+      [
+       "​= Unternehmenswert (Marktkapitalisierung)",
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Unternehmenswert (laut Bericht TNB17)",
+       98.45,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "​= Market Value Added (Unternehmenswert − Eigenkapital)",
+       null,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Shareholder Earnings kumuliert",
+       0,
+       null,
+       null,
+       null,
+       null
+      ],
+      [
+       "Ausgeschüttete Dividende Periode 0",
+       null,
+       null,
+       null,
+       null,
+       null
+      ]
+     ]
+    }
+   ]
+  }
+ ]
+}'''
 
 TEMPLATE_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "template.xlsx")
 if not os.path.exists(TEMPLATE_PATH):
@@ -1774,6 +4677,11 @@ def get_model():
 @st.cache_resource(show_spinner=False)
 def get_meta():
     return json.loads(_INPUTS_META_JSON)
+
+
+@st.cache_resource(show_spinner=False)
+def get_structure():
+    return json.loads(_STRUCTURE_JSON)
 
 
 def key_for(sheet, cell):
@@ -1917,29 +4825,46 @@ with tab_input:
         st.info("Periode 0 enthält die fixen Ausgangsdaten aus der Excel-Datei und kann nicht verändert werden. Erstelle eine neue Periode, um Werte anzupassen.")
     else:
         st.subheader(f"Eingabewerte bearbeiten – Periode {selected}")
+        structure = get_structure()
         sheet_tabs = st.tabs(sheets_order)
         new_overrides = {}
         for sheet, st_tab in zip(sheets_order, sheet_tabs):
             with st_tab:
                 items = [m for m in meta if m["sheet"] == sheet]
-                sections = {}
+                by_major_sub = {}
                 for m in items:
-                    sections.setdefault(m.get("section") or sheet, []).append(m)
-                for sec_title, sec_items in sections.items():
-                    st.markdown(f"#### {sec_title}")
-                    cols = st.columns(2)
-                    for i, m in enumerate(sec_items):
-                        label = m["label"]
-                        if m.get("col_label"):
-                            label = f"{label} – {m['col_label']}"
-                        cur = periods.get(selected, {}).get(sheet, {}).get(m["cell"], m["value"])
-                        with cols[i % 2]:
-                            if isinstance(m["value"], str):
-                                val = st.text_input(label, value=str(cur), key=f"{sheet}_{m['cell']}")
-                            else:
-                                val = st.number_input(label, value=float(cur), key=f"{sheet}_{m['cell']}", format="%.6g")
-                        new_overrides.setdefault(sheet, {})[m["cell"]] = val
-                    st.divider()
+                    by_major_sub.setdefault((m.get("major") or sheet, m.get("sub")), []).append(m)
+
+                for group in structure.get(sheet, []):
+                    major = group["title"]
+                    has_any_inputs = any(k[0] == major for k in by_major_sub)
+                    with st.expander(f"**{major}**", expanded=has_any_inputs):
+                        for sub in group["subs"]:
+                            sub_title = sub["title"]
+                            key = (major, sub_title)
+                            sub_items = by_major_sub.get(key, [])
+                            if sub_items:
+                                if sub_title:
+                                    st.markdown(f"**{sub_title}**")
+                                cols = st.columns(2)
+                                for i, m in enumerate(sub_items):
+                                    label = m["label"]
+                                    if m.get("col_label"):
+                                        label = f"{label} – {m['col_label']}"
+                                    cur = periods.get(selected, {}).get(sheet, {}).get(m["cell"], m["value"])
+                                    with cols[i % 2]:
+                                        if isinstance(m["value"], str):
+                                            val = st.text_input(label, value=str(cur), key=f"{sheet}_{m['cell']}")
+                                        else:
+                                            val = st.number_input(label, value=float(cur), key=f"{sheet}_{m['cell']}", format="%.6g")
+                                    new_overrides.setdefault(sheet, {})[m["cell"]] = val
+                                st.markdown("")
+                            elif sub["rows"]:
+                                if sub_title:
+                                    st.caption(f"{sub_title} (Referenztabelle, nicht editierbar)")
+                                else:
+                                    st.caption("Referenztabelle, nicht editierbar")
+                                st.table(sub["rows"])
         if st.button("💾 Periode speichern & neu berechnen", type="primary"):
             periods[selected] = new_overrides
             save_periods(periods)
