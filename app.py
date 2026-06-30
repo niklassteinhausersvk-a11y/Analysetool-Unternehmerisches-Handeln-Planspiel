@@ -16,1512 +16,1728 @@ _INPUTS_META_JSON = r'''[
   "cell": "B7",
   "label": "Wirtschaftswachstum (Konjunktur, %)",
   "col_label": null,
-  "value": 0.02
+  "value": 0.02,
+  "section": "A) Absatzplanung Copy Classic – Markt 1"
  },
  {
   "sheet": "1 Absatzplanung",
   "cell": "B8",
   "label": "Absatz Vorperiode (Stück)",
   "col_label": null,
-  "value": 43000
+  "value": 43000,
+  "section": "A) Absatzplanung Copy Classic – Markt 1"
  },
  {
   "sheet": "1 Absatzplanung",
   "cell": "B10",
   "label": "Geplanter Marktanteil (%)",
   "col_label": null,
-  "value": 0.2
+  "value": 0.2,
+  "section": "A) Absatzplanung Copy Classic – Markt 1"
  },
  {
   "sheet": "1 Absatzplanung",
   "cell": "B12",
   "label": "Geplanter Preis (EUR/Stück)",
   "col_label": null,
-  "value": 3000
+  "value": 3000,
+  "section": "A) Absatzplanung Copy Classic – Markt 1"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "B7",
   "label": "Umsatzerlöse",
   "col_label": null,
-  "value": 129
+  "value": 129,
+  "section": "Gesamtkostenverfahren"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "B8",
   "label": "Sonstige Erträge",
   "col_label": null,
-  "value": 0
+  "value": 0,
+  "section": "Gesamtkostenverfahren"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "B16",
   "label": "- Abschreibungen",
   "col_label": null,
-  "value": 7.15
+  "value": 7.15,
+  "section": "Gesamtkostenverfahren"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "B35",
   "label": "+ Erträge aus Wertpapieren",
   "col_label": null,
-  "value": 0
+  "value": 0,
+  "section": "Periodenüberschuss / -fehlbetrag"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "B39",
   "label": "- Steuern auf Einkommen und Ertrag (45%)",
   "col_label": null,
-  "value": 3.5
+  "value": 3.5,
+  "section": "Periodenüberschuss / -fehlbetrag"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "B44",
   "label": "Gewinn-/Verlustvortrag der Vorperiode",
   "col_label": null,
-  "value": 3
+  "value": 3,
+  "section": "Ergebnisverwendung"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "B45",
   "label": "- Ausschüttung Dividende aktuelle Periode",
   "col_label": null,
-  "value": 1
+  "value": 1,
+  "section": "Ergebnisverwendung"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "C54",
   "label": "Umsatzerlöse",
   "col_label": "Großabnehmer",
-  "value": 0
+  "value": 0,
+  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "D54",
   "label": "Umsatzerlöse",
   "col_label": "Ausschreibung",
-  "value": 0
+  "value": 0,
+  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "E54",
   "label": "Umsatzerlöse",
   "col_label": "Markt 2",
-  "value": 0
+  "value": 0,
+  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "F54",
   "label": "Umsatzerlöse",
   "col_label": "Sondermarkt",
-  "value": 0
+  "value": 0,
+  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "B55",
   "label": "- Variable Materialkosten",
   "col_label": null,
-  "value": 24.75
+  "value": 24.75,
+  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "C55",
   "label": "- Variable Materialkosten",
   "col_label": "Großabnehmer",
-  "value": 0
+  "value": 0,
+  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "D55",
   "label": "- Variable Materialkosten",
   "col_label": "Ausschreibung",
-  "value": 0
+  "value": 0,
+  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "E55",
   "label": "- Variable Materialkosten",
   "col_label": "Markt 2",
-  "value": 0
+  "value": 0,
+  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "F55",
   "label": "- Variable Materialkosten",
   "col_label": "Sondermarkt",
-  "value": 0
+  "value": 0,
+  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "B56",
   "label": "- Variable Fertigungskosten",
   "col_label": null,
-  "value": 38.61
+  "value": 38.61,
+  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "C56",
   "label": "- Variable Fertigungskosten",
   "col_label": "Großabnehmer",
-  "value": 0
+  "value": 0,
+  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "D56",
   "label": "- Variable Fertigungskosten",
   "col_label": "Ausschreibung",
-  "value": 0
+  "value": 0,
+  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "E56",
   "label": "- Variable Fertigungskosten",
   "col_label": "Markt 2",
-  "value": 0
+  "value": 0,
+  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "F56",
   "label": "- Variable Fertigungskosten",
   "col_label": "Sondermarkt",
-  "value": 0
+  "value": 0,
+  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "B57",
   "label": "- Transportkosten",
   "col_label": null,
-  "value": 1.08
+  "value": 1.08,
+  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "C57",
   "label": "- Transportkosten",
   "col_label": "Großabnehmer",
-  "value": 0
+  "value": 0,
+  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "D57",
   "label": "- Transportkosten",
   "col_label": "Ausschreibung",
-  "value": 0
+  "value": 0,
+  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "E57",
   "label": "- Transportkosten",
   "col_label": "Markt 2",
-  "value": 0
+  "value": 0,
+  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "F57",
   "label": "- Transportkosten",
   "col_label": "Sondermarkt",
-  "value": 0
+  "value": 0,
+  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "B59",
   "label": "- Fixe Materialkosten",
   "col_label": null,
-  "value": 1.67
+  "value": 1.67,
+  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "C59",
   "label": "- Fixe Materialkosten",
   "col_label": "Großabnehmer",
-  "value": 0
+  "value": 0,
+  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "D59",
   "label": "- Fixe Materialkosten",
   "col_label": "Ausschreibung",
-  "value": 0
+  "value": 0,
+  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "E59",
   "label": "- Fixe Materialkosten",
   "col_label": "Markt 2",
-  "value": 0
+  "value": 0,
+  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "F59",
   "label": "- Fixe Materialkosten",
   "col_label": "Sondermarkt",
-  "value": 0
+  "value": 0,
+  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "B60",
   "label": "- Fixe Fertigungskosten",
   "col_label": null,
-  "value": 22.99
+  "value": 22.99,
+  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "C60",
   "label": "- Fixe Fertigungskosten",
   "col_label": "Großabnehmer",
-  "value": 0
+  "value": 0,
+  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "D60",
   "label": "- Fixe Fertigungskosten",
   "col_label": "Ausschreibung",
-  "value": 0
+  "value": 0,
+  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "E60",
   "label": "- Fixe Fertigungskosten",
   "col_label": "Markt 2",
-  "value": 0
+  "value": 0,
+  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "F60",
   "label": "- Fixe Fertigungskosten",
   "col_label": "Sondermarkt",
-  "value": 0
+  "value": 0,
+  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "B62",
   "label": "- Werbungskosten",
   "col_label": null,
-  "value": 6
+  "value": 6,
+  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "C62",
   "label": "- Werbungskosten",
   "col_label": "Großabnehmer",
-  "value": 0
+  "value": 0,
+  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "D62",
   "label": "- Werbungskosten",
   "col_label": "Ausschreibung",
-  "value": 0
+  "value": 0,
+  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "E62",
   "label": "- Werbungskosten",
   "col_label": "Markt 2",
-  "value": 0
+  "value": 0,
+  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "F62",
   "label": "- Werbungskosten",
   "col_label": "Sondermarkt",
-  "value": 0
+  "value": 0,
+  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "C64",
   "label": "- Entwicklungskosten",
   "col_label": "Großabnehmer",
-  "value": 0
+  "value": 0,
+  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "D64",
   "label": "- Entwicklungskosten",
   "col_label": "Ausschreibung",
-  "value": 0
+  "value": 0,
+  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "E64",
   "label": "- Entwicklungskosten",
   "col_label": "Markt 2",
-  "value": 0
+  "value": 0,
+  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "F64",
   "label": "- Entwicklungskosten",
   "col_label": "Sondermarkt",
-  "value": 0
+  "value": 0,
+  "section": "B) Deckungsbeitragsrechnung Gesamt – Copy Classic (MEUR)"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "B73",
   "label": "Preis Markt 1",
   "col_label": null,
-  "value": 3000
+  "value": 3000,
+  "section": "Deckungsbeitragsrechnung pro Stück (EUR, Markt 1 / Durchschnitt)"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "B74",
   "label": "- Var. Materialkosten/Stück",
   "col_label": null,
-  "value": 575.56
+  "value": 575.56,
+  "section": "Deckungsbeitragsrechnung pro Stück (EUR, Markt 1 / Durchschnitt)"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "B75",
   "label": "- Var. Fertigungskosten/Stück",
   "col_label": null,
-  "value": 897.81
+  "value": 897.81,
+  "section": "Deckungsbeitragsrechnung pro Stück (EUR, Markt 1 / Durchschnitt)"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "B76",
   "label": "- Transportkosten/Stück",
   "col_label": null,
-  "value": 25
+  "value": 25,
+  "section": "Deckungsbeitragsrechnung pro Stück (EUR, Markt 1 / Durchschnitt)"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "B79",
   "label": "= DB V / Stück (Periode 0)",
   "col_label": null,
-  "value": 230.98
+  "value": 230.98,
+  "section": "Deckungsbeitragsrechnung pro Stück (EUR, Markt 1 / Durchschnitt)"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "B84",
   "label": "+ Einkauf Einzelkosten",
   "col_label": null,
-  "value": 23.09
+  "value": 23.09,
+  "section": "Gesamt (MEUR)"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "B85",
   "label": "+ Einkauf Gemeinkosten",
   "col_label": null,
-  "value": 1.56
+  "value": 1.56,
+  "section": "Gesamt (MEUR)"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "B86",
   "label": "+ Fertigung Einzelkosten",
   "col_label": null,
-  "value": 36.01
+  "value": 36.01,
+  "section": "Gesamt (MEUR)"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "B87",
   "label": "+ Fertigung Gemeinkosten",
   "col_label": null,
-  "value": 21.43
+  "value": 21.43,
+  "section": "Gesamt (MEUR)"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "B89",
   "label": "+/- Bestandsveränderung Fertigprodukte",
   "col_label": null,
-  "value": 5.93
+  "value": 5.93,
+  "section": "Gesamt (MEUR)"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "B91",
   "label": "+ F&E Einzelkosten",
   "col_label": null,
-  "value": 3.5
+  "value": 3.5,
+  "section": "Gesamt (MEUR)"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "B92",
   "label": "+ F&E Gemeinkosten",
   "col_label": null,
-  "value": 2.27
+  "value": 2.27,
+  "section": "Gesamt (MEUR)"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "B94",
   "label": "+ Vertrieb Gemeinkosten",
   "col_label": null,
-  "value": 8.53
+  "value": 8.53,
+  "section": "Gesamt (MEUR)"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "B95",
   "label": "+ Verwaltung Einzelkosten",
   "col_label": null,
-  "value": 0
+  "value": 0,
+  "section": "Gesamt (MEUR)"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "B96",
   "label": "+ Verwaltung Gemeinkosten",
   "col_label": null,
-  "value": 9.68
+  "value": 9.68,
+  "section": "Gesamt (MEUR)"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "B109",
   "label": "Kassenanfangsbestand",
   "col_label": null,
-  "value": 0.5
+  "value": 0.5,
+  "section": "D) Liquiditätsrechnung"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "B110",
   "label": "Einzahlungen aus Umsatz aktuelle Periode",
   "col_label": null,
-  "value": 103.2
+  "value": 103.2,
+  "section": "D) Liquiditätsrechnung"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "B111",
   "label": "Einzahlungen aus Umsatz Vorperiode",
   "col_label": null,
-  "value": 17.84
+  "value": 17.84,
+  "section": "D) Liquiditätsrechnung"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "B112",
   "label": "Verkauf von Wertpapieren",
   "col_label": null,
-  "value": 0
+  "value": 0,
+  "section": "D) Liquiditätsrechnung"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "B113",
   "label": "Zinserträge",
   "col_label": null,
-  "value": 0
+  "value": 0,
+  "section": "D) Liquiditätsrechnung"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "B114",
   "label": "Sonstige Einzahlungen/Kapitalerhöhung",
   "col_label": null,
-  "value": 0
+  "value": 0,
+  "section": "D) Liquiditätsrechnung"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "B115",
   "label": "Desinvestitionen Fertigungsanlagen",
   "col_label": null,
-  "value": 0
+  "value": 0,
+  "section": "D) Liquiditätsrechnung"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "B117",
   "label": "Erlös Sondermarkt",
   "col_label": null,
-  "value": 0
+  "value": 0,
+  "section": "D) Liquiditätsrechnung"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "B118",
   "label": "Überziehungskredit",
   "col_label": null,
-  "value": 0
+  "value": 0,
+  "section": "D) Liquiditätsrechnung"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "B120",
   "label": "Einsatzstoffe/Betriebsstoffe/Fertigerzeugnisse",
   "col_label": null,
-  "value": 18.5
+  "value": 18.5,
+  "section": "D) Liquiditätsrechnung"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "B121",
   "label": "Einkauf Vorperiode",
   "col_label": null,
-  "value": 0
+  "value": 0,
+  "section": "D) Liquiditätsrechnung"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "B123",
   "label": "Sonstige Aufwendungen",
   "col_label": null,
-  "value": 26.75
+  "value": 26.75,
+  "section": "D) Liquiditätsrechnung"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "B124",
   "label": "Rückzahlung kurzfr. Kredite & Überziehungskredit",
   "col_label": null,
-  "value": 40
+  "value": 40,
+  "section": "D) Liquiditätsrechnung"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "B126",
   "label": "Kauf von Fertigungsanlagen",
   "col_label": null,
-  "value": 0
+  "value": 0,
+  "section": "D) Liquiditätsrechnung"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "B127",
   "label": "Kauf von Wertpapieren",
   "col_label": null,
-  "value": 0
+  "value": 0,
+  "section": "D) Liquiditätsrechnung"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "B128",
   "label": "Kauf von Umweltanlagen",
   "col_label": null,
-  "value": 1.5
+  "value": 1.5,
+  "section": "D) Liquiditätsrechnung"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "B130",
   "label": "Sonstige Auszahlungen",
   "col_label": null,
-  "value": 0
+  "value": 0,
+  "section": "D) Liquiditätsrechnung"
  },
  {
   "sheet": "2 Finanzen",
   "cell": "B132",
   "label": "Zinszahlung Überziehungskredit",
   "col_label": null,
-  "value": 0
+  "value": 0,
+  "section": "D) Liquiditätsrechnung"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "B6",
   "label": "Typ A Nr. 1",
   "col_label": null,
-  "value": -8
+  "value": -8,
+  "section": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "C6",
   "label": "Typ A Nr. 1",
   "col_label": "Beschaffungswert (MEUR)",
-  "value": 12.5
+  "value": 12.5,
+  "section": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "D6",
   "label": "Typ A Nr. 1",
   "col_label": "Restlaufzeit (Perioden)",
-  "value": 1
+  "value": 1,
+  "section": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "E6",
   "label": "Typ A Nr. 1",
   "col_label": "Abschreibung (MEUR/Per.)",
-  "value": 1.25
+  "value": 1.25,
+  "section": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "F6",
   "label": "Typ A Nr. 1",
   "col_label": "Restbuchwert (MEUR)",
-  "value": 1.25
+  "value": 1.25,
+  "section": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "G6",
   "label": "Typ A Nr. 1",
   "col_label": "Sonst. Fixkosten (MEUR)",
-  "value": 1.5
+  "value": 1.5,
+  "section": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "H6",
   "label": "Typ A Nr. 1",
   "col_label": "Umweltindex",
-  "value": 83
+  "value": 83,
+  "section": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "B7",
   "label": "Typ A Nr. 2",
   "col_label": null,
-  "value": -7
+  "value": -7,
+  "section": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "C7",
   "label": "Typ A Nr. 2",
   "col_label": 12.5,
-  "value": 15
+  "value": 15,
+  "section": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "D7",
   "label": "Typ A Nr. 2",
   "col_label": 1,
-  "value": 2
+  "value": 2,
+  "section": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "E7",
   "label": "Typ A Nr. 2",
   "col_label": 1.25,
-  "value": 1.5
+  "value": 1.5,
+  "section": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "F7",
   "label": "Typ A Nr. 2",
   "col_label": 1.25,
-  "value": 3
+  "value": 3,
+  "section": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "G7",
   "label": "Typ A Nr. 2",
   "col_label": 1.5,
-  "value": 1
+  "value": 1,
+  "section": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "H7",
   "label": "Typ A Nr. 2",
   "col_label": 83,
-  "value": 90
+  "value": 90,
+  "section": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "B8",
   "label": "Typ A Nr. 3",
   "col_label": null,
-  "value": -6
+  "value": -6,
+  "section": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "C8",
   "label": "Typ A Nr. 3",
   "col_label": 15,
-  "value": 20
+  "value": 20,
+  "section": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "D8",
   "label": "Typ A Nr. 3",
   "col_label": 2,
-  "value": 3
+  "value": 3,
+  "section": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "E8",
   "label": "Typ A Nr. 3",
   "col_label": 1.5,
-  "value": 2
+  "value": 2,
+  "section": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "F8",
   "label": "Typ A Nr. 3",
   "col_label": 3,
-  "value": 6
+  "value": 6,
+  "section": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "G8",
   "label": "Typ A Nr. 3",
   "col_label": 1,
-  "value": 0.5
+  "value": 0.5,
+  "section": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "H8",
   "label": "Typ A Nr. 3",
   "col_label": 90,
-  "value": 95
+  "value": 95,
+  "section": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "B9",
   "label": "Typ A Nr. 4",
   "col_label": null,
-  "value": -5
+  "value": -5,
+  "section": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "C9",
   "label": "Typ A Nr. 4",
   "col_label": 20,
-  "value": 20
+  "value": 20,
+  "section": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "D9",
   "label": "Typ A Nr. 4",
   "col_label": 3,
-  "value": 4
+  "value": 4,
+  "section": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "E9",
   "label": "Typ A Nr. 4",
   "col_label": 2,
-  "value": 2
+  "value": 2,
+  "section": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "F9",
   "label": "Typ A Nr. 4",
   "col_label": 6,
-  "value": 8
+  "value": 8,
+  "section": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "G9",
   "label": "Typ A Nr. 4",
   "col_label": 0.5,
-  "value": 0.25
+  "value": 0.25,
+  "section": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "H9",
   "label": "Typ A Nr. 4",
   "col_label": 95,
-  "value": 98
+  "value": 98,
+  "section": "A) Bestand an Fertigungsanlagen (Typ A, Nr. 1–4)"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "B14",
   "label": "Typ A Nr. 1",
   "col_label": null,
-  "value": 8000
+  "value": 8000,
+  "section": "B) Kapazität & Umweltindex der Anlagen"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "C14",
   "label": "Typ A Nr. 1",
   "col_label": "Instandhaltung (MEUR)",
-  "value": 1.5
+  "value": 1.5,
+  "section": "B) Kapazität & Umweltindex der Anlagen"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "D14",
   "label": "Typ A Nr. 1",
   "col_label": "Verfügbarkeitsgrad (Faktor)",
-  "value": 0.97
+  "value": 0.97,
+  "section": "B) Kapazität & Umweltindex der Anlagen"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "E14",
   "label": "Typ A Nr. 1",
   "col_label": "Rationalisierung (Faktor)",
-  "value": 1
+  "value": 1,
+  "section": "B) Kapazität & Umweltindex der Anlagen"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "B15",
   "label": "Typ A Nr. 2",
   "col_label": null,
-  "value": 9000
+  "value": 9000,
+  "section": "B) Kapazität & Umweltindex der Anlagen"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "C15",
   "label": "Typ A Nr. 2",
   "col_label": 1.5,
-  "value": 1.5
+  "value": 1.5,
+  "section": "B) Kapazität & Umweltindex der Anlagen"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "D15",
   "label": "Typ A Nr. 2",
   "col_label": 0.97,
-  "value": 0.97
+  "value": 0.97,
+  "section": "B) Kapazität & Umweltindex der Anlagen"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "E15",
   "label": "Typ A Nr. 2",
   "col_label": 1,
-  "value": 1
+  "value": 1,
+  "section": "B) Kapazität & Umweltindex der Anlagen"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "B16",
   "label": "Typ A Nr. 3",
   "col_label": null,
-  "value": 11500
+  "value": 11500,
+  "section": "B) Kapazität & Umweltindex der Anlagen"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "C16",
   "label": "Typ A Nr. 3",
   "col_label": 1.5,
-  "value": 1.5
+  "value": 1.5,
+  "section": "B) Kapazität & Umweltindex der Anlagen"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "D16",
   "label": "Typ A Nr. 3",
   "col_label": 0.97,
-  "value": 0.97
+  "value": 0.97,
+  "section": "B) Kapazität & Umweltindex der Anlagen"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "E16",
   "label": "Typ A Nr. 3",
   "col_label": 1,
-  "value": 1
+  "value": 1,
+  "section": "B) Kapazität & Umweltindex der Anlagen"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "B17",
   "label": "Typ A Nr. 4",
   "col_label": null,
-  "value": 13500
+  "value": 13500,
+  "section": "B) Kapazität & Umweltindex der Anlagen"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "C17",
   "label": "Typ A Nr. 4",
   "col_label": 1.5,
-  "value": 1.5
+  "value": 1.5,
+  "section": "B) Kapazität & Umweltindex der Anlagen"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "D17",
   "label": "Typ A Nr. 4",
   "col_label": 0.97,
-  "value": 0.97
+  "value": 0.97,
+  "section": "B) Kapazität & Umweltindex der Anlagen"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "E17",
   "label": "Typ A Nr. 4",
   "col_label": 1,
-  "value": 1
+  "value": 1,
+  "section": "B) Kapazität & Umweltindex der Anlagen"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "B39",
   "label": "Umweltbelastungsindikator des Unternehmens (Periode 0)",
   "col_label": null,
-  "value": 93.27
+  "value": 93.27,
+  "section": "D) Referenz: Umweltindex der Fertigungsanlagen → Abgabe an Umweltbehörde"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "F39",
   "label": "Umweltbelastungsindikator des Unternehmens (Periode 0)",
   "col_label": null,
-  "value": 1.35
+  "value": 1.35,
+  "section": "D) Referenz: Umweltindex der Fertigungsanlagen → Abgabe an Umweltbehörde"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "B43",
   "label": "Geplante Fertigungsmenge (Stück)",
   "col_label": null,
-  "value": 40000
+  "value": 40000,
+  "section": "E) Auslastung Fertigungsanlagen – Copy Classic"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "B46",
   "label": "Tatsächliche Fertigungsmenge (Stück)",
   "col_label": null,
-  "value": 40000
+  "value": 40000,
+  "section": "E) Auslastung Fertigungsanlagen – Copy Classic"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "B47",
   "label": "Benötigte Anlagenkapazität pro Fertigprodukt",
   "col_label": null,
-  "value": 1
+  "value": 1,
+  "section": "E) Auslastung Fertigungsanlagen – Copy Classic"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "B53",
   "label": "Personalbestand Fertigung",
   "col_label": null,
-  "value": 852
+  "value": 852,
+  "section": "F) Fertigungspersonal – Bestand & Fehlzeiten"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "B54",
   "label": "- Fehlzeiten",
   "col_label": null,
-  "value": 47
+  "value": 47,
+  "section": "F) Fertigungspersonal – Bestand & Fehlzeiten"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "B59",
   "label": "Grundproduktivität (Stück/Mitarbeiter/Periode)",
   "col_label": null,
-  "value": 50
+  "value": 50,
+  "section": "G) Produktivität der Fertigungsmitarbeiter"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "B60",
   "label": "Neue Mitarbeiter (%)",
   "col_label": null,
-  "value": 0.0586
+  "value": 0.0586,
+  "section": "G) Produktivität der Fertigungsmitarbeiter"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "B61",
   "label": "Trainingsausgaben pro Mitarbeiter (EUR)",
   "col_label": null,
-  "value": 1000
+  "value": 1000,
+  "section": "G) Produktivität der Fertigungsmitarbeiter"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "B62",
   "label": "Mitarbeitermotivation (Index)",
   "col_label": null,
-  "value": 56.47
+  "value": 56.47,
+  "section": "G) Produktivität der Fertigungsmitarbeiter"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "B63",
   "label": "Prozessoptimierungsausgaben (MEUR)",
   "col_label": null,
-  "value": 0
+  "value": 0,
+  "section": "G) Produktivität der Fertigungsmitarbeiter"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "B64",
   "label": "Einarbeitungsindex",
   "col_label": null,
-  "value": 1
+  "value": 1,
+  "section": "G) Produktivität der Fertigungsmitarbeiter"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "B65",
   "label": "Prozessoptimierungsindex",
   "col_label": null,
-  "value": 1
+  "value": 1,
+  "section": "G) Produktivität der Fertigungsmitarbeiter"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "B66",
   "label": "Personalqualifizierungsindex",
   "col_label": null,
-  "value": 1
+  "value": 1,
+  "section": "G) Produktivität der Fertigungsmitarbeiter"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "B67",
   "label": "Motivationsindex",
   "col_label": null,
-  "value": 1
+  "value": 1,
+  "section": "G) Produktivität der Fertigungsmitarbeiter"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "B69",
   "label": "Kumulierte Fertigung bis Vorperiode (Stück)",
   "col_label": null,
-  "value": 0
+  "value": 0,
+  "section": "G) Produktivität der Fertigungsmitarbeiter"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "B70",
   "label": "Produktivitätsindex II (Lernkurve)",
   "col_label": null,
-  "value": 1
+  "value": 1,
+  "section": "G) Produktivität der Fertigungsmitarbeiter"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "B77",
   "label": "Fertigungskapazität pro Mitarbeiter (Stück/Periode)",
   "col_label": null,
-  "value": 50.02
+  "value": 50.02,
+  "section": "H) Auslastung Fertigungsmitarbeiter"
  },
  {
   "sheet": "3 Fertigung",
   "cell": "B79",
   "label": "Eingesetztes Personal inkl. Überstunden",
   "col_label": null,
-  "value": 799.7
+  "value": 799.7,
+  "section": "H) Auslastung Fertigungsmitarbeiter"
  },
  {
   "sheet": "4 Personal",
   "cell": "B6",
   "label": "Einkauf",
   "col_label": null,
-  "value": 18
+  "value": 18,
+  "section": "A) Personalbestand nach Kostenstelle"
  },
  {
   "sheet": "4 Personal",
   "cell": "C6",
   "label": "Einkauf",
   "col_label": "​+ Einstellungen",
-  "value": 1
+  "value": 1,
+  "section": "A) Personalbestand nach Kostenstelle"
  },
  {
   "sheet": "4 Personal",
   "cell": "D6",
   "label": "Einkauf",
   "col_label": "​- Entlassungen",
-  "value": 0
+  "value": 0,
+  "section": "A) Personalbestand nach Kostenstelle"
  },
  {
   "sheet": "4 Personal",
   "cell": "E6",
   "label": "Einkauf",
   "col_label": "​- Fluktuation",
-  "value": 1
+  "value": 1,
+  "section": "A) Personalbestand nach Kostenstelle"
  },
  {
   "sheet": "4 Personal",
   "cell": "B7",
   "label": "Verwaltung",
   "col_label": null,
-  "value": 200
+  "value": 200,
+  "section": "A) Personalbestand nach Kostenstelle"
  },
  {
   "sheet": "4 Personal",
   "cell": "C7",
   "label": "Verwaltung",
   "col_label": 1,
-  "value": 16
+  "value": 16,
+  "section": "A) Personalbestand nach Kostenstelle"
  },
  {
   "sheet": "4 Personal",
   "cell": "D7",
   "label": "Verwaltung",
   "col_label": "​- Entlassungen",
-  "value": 0
+  "value": 0,
+  "section": "A) Personalbestand nach Kostenstelle"
  },
  {
   "sheet": "4 Personal",
   "cell": "E7",
   "label": "Verwaltung",
   "col_label": 1,
-  "value": 8
+  "value": 8,
+  "section": "A) Personalbestand nach Kostenstelle"
  },
  {
   "sheet": "4 Personal",
   "cell": "B8",
   "label": "Fertigung",
   "col_label": null,
-  "value": 853
+  "value": 853,
+  "section": "A) Personalbestand nach Kostenstelle"
  },
  {
   "sheet": "4 Personal",
   "cell": "C8",
   "label": "Fertigung",
   "col_label": 16,
-  "value": 50
+  "value": 50,
+  "section": "A) Personalbestand nach Kostenstelle"
  },
  {
   "sheet": "4 Personal",
   "cell": "D8",
   "label": "Fertigung",
   "col_label": "​- Entlassungen",
-  "value": 0
+  "value": 0,
+  "section": "A) Personalbestand nach Kostenstelle"
  },
  {
   "sheet": "4 Personal",
   "cell": "E8",
   "label": "Fertigung",
   "col_label": 8,
-  "value": 51
+  "value": 51,
+  "section": "A) Personalbestand nach Kostenstelle"
  },
  {
   "sheet": "4 Personal",
   "cell": "B9",
   "label": "Forschung & Entwicklung",
   "col_label": null,
-  "value": 34
+  "value": 34,
+  "section": "A) Personalbestand nach Kostenstelle"
  },
  {
   "sheet": "4 Personal",
   "cell": "C9",
   "label": "Forschung & Entwicklung",
   "col_label": 50,
-  "value": 2
+  "value": 2,
+  "section": "A) Personalbestand nach Kostenstelle"
  },
  {
   "sheet": "4 Personal",
   "cell": "D9",
   "label": "Forschung & Entwicklung",
   "col_label": "​- Entlassungen",
-  "value": 0
+  "value": 0,
+  "section": "A) Personalbestand nach Kostenstelle"
  },
  {
   "sheet": "4 Personal",
   "cell": "E9",
   "label": "Forschung & Entwicklung",
   "col_label": 51,
-  "value": 1
+  "value": 1,
+  "section": "A) Personalbestand nach Kostenstelle"
  },
  {
   "sheet": "4 Personal",
   "cell": "B10",
   "label": "Vertrieb",
   "col_label": null,
-  "value": 100
+  "value": 100,
+  "section": "A) Personalbestand nach Kostenstelle"
  },
  {
   "sheet": "4 Personal",
   "cell": "C10",
   "label": "Vertrieb",
   "col_label": 2,
-  "value": 9
+  "value": 9,
+  "section": "A) Personalbestand nach Kostenstelle"
  },
  {
   "sheet": "4 Personal",
   "cell": "D10",
   "label": "Vertrieb",
   "col_label": "​- Entlassungen",
-  "value": 0
+  "value": 0,
+  "section": "A) Personalbestand nach Kostenstelle"
  },
  {
   "sheet": "4 Personal",
   "cell": "E10",
   "label": "Vertrieb",
   "col_label": 1,
-  "value": 9
+  "value": 9,
+  "section": "A) Personalbestand nach Kostenstelle"
  },
  {
   "sheet": "4 Personal",
   "cell": "B15",
   "label": "Einkauf",
   "col_label": null,
-  "value": 0.54
+  "value": 0.54,
+  "section": "B) Personalkosten nach Kostenstelle (MEUR)"
  },
  {
   "sheet": "4 Personal",
   "cell": "C15",
   "label": "Einkauf",
   "col_label": "​+ Einstellungen/Entlassungen/Training",
-  "value": 0.01
+  "value": 0.01,
+  "section": "B) Personalkosten nach Kostenstelle (MEUR)"
  },
  {
   "sheet": "4 Personal",
   "cell": "D15",
   "label": "Einkauf",
   "col_label": "​+ Personalnebenkosten",
-  "value": 0.22
+  "value": 0.22,
+  "section": "B) Personalkosten nach Kostenstelle (MEUR)"
  },
  {
   "sheet": "4 Personal",
   "cell": "E15",
   "label": "Einkauf",
   "col_label": "​+ Pensionsrückstellungen",
-  "value": 0.03
+  "value": 0.03,
+  "section": "B) Personalkosten nach Kostenstelle (MEUR)"
  },
  {
   "sheet": "4 Personal",
   "cell": "B16",
   "label": "Verwaltung",
   "col_label": null,
-  "value": 5.82
+  "value": 5.82,
+  "section": "B) Personalkosten nach Kostenstelle (MEUR)"
  },
  {
   "sheet": "4 Personal",
   "cell": "C16",
   "label": "Verwaltung",
   "col_label": 0.01,
-  "value": 0.2
+  "value": 0.2,
+  "section": "B) Personalkosten nach Kostenstelle (MEUR)"
  },
  {
   "sheet": "4 Personal",
   "cell": "D16",
   "label": "Verwaltung",
   "col_label": 0.22,
-  "value": 2.33
+  "value": 2.33,
+  "section": "B) Personalkosten nach Kostenstelle (MEUR)"
  },
  {
   "sheet": "4 Personal",
   "cell": "E16",
   "label": "Verwaltung",
   "col_label": 0.03,
-  "value": 0.29
+  "value": 0.29,
+  "section": "B) Personalkosten nach Kostenstelle (MEUR)"
  },
  {
   "sheet": "4 Personal",
   "cell": "B17",
   "label": "Fertigung",
   "col_label": null,
-  "value": 25.56
+  "value": 25.56,
+  "section": "B) Personalkosten nach Kostenstelle (MEUR)"
  },
  {
   "sheet": "4 Personal",
   "cell": "C17",
   "label": "Fertigung",
   "col_label": 0.2,
-  "value": 1.48
+  "value": 1.48,
+  "section": "B) Personalkosten nach Kostenstelle (MEUR)"
  },
  {
   "sheet": "4 Personal",
   "cell": "D17",
   "label": "Fertigung",
   "col_label": 2.33,
-  "value": 10.22
+  "value": 10.22,
+  "section": "B) Personalkosten nach Kostenstelle (MEUR)"
  },
  {
   "sheet": "4 Personal",
   "cell": "E17",
   "label": "Fertigung",
   "col_label": 0.29,
-  "value": 1.28
+  "value": 1.28,
+  "section": "B) Personalkosten nach Kostenstelle (MEUR)"
  },
  {
   "sheet": "4 Personal",
   "cell": "B18",
   "label": "Forschung & Entwicklung",
   "col_label": null,
-  "value": 1.54
+  "value": 1.54,
+  "section": "B) Personalkosten nach Kostenstelle (MEUR)"
  },
  {
   "sheet": "4 Personal",
   "cell": "C18",
   "label": "Forschung & Entwicklung",
   "col_label": 1.48,
-  "value": 0.03
+  "value": 0.03,
+  "section": "B) Personalkosten nach Kostenstelle (MEUR)"
  },
  {
   "sheet": "4 Personal",
   "cell": "D18",
   "label": "Forschung & Entwicklung",
   "col_label": 10.22,
-  "value": 0.62
+  "value": 0.62,
+  "section": "B) Personalkosten nach Kostenstelle (MEUR)"
  },
  {
   "sheet": "4 Personal",
   "cell": "E18",
   "label": "Forschung & Entwicklung",
   "col_label": 1.28,
-  "value": 0.08
+  "value": 0.08,
+  "section": "B) Personalkosten nach Kostenstelle (MEUR)"
  },
  {
   "sheet": "4 Personal",
   "cell": "B19",
   "label": "Vertrieb",
   "col_label": null,
-  "value": 4
+  "value": 4,
+  "section": "B) Personalkosten nach Kostenstelle (MEUR)"
  },
  {
   "sheet": "4 Personal",
   "cell": "C19",
   "label": "Vertrieb",
   "col_label": 0.03,
-  "value": 0.11
+  "value": 0.11,
+  "section": "B) Personalkosten nach Kostenstelle (MEUR)"
  },
  {
   "sheet": "4 Personal",
   "cell": "D19",
   "label": "Vertrieb",
   "col_label": 0.62,
-  "value": 1.6
+  "value": 1.6,
+  "section": "B) Personalkosten nach Kostenstelle (MEUR)"
  },
  {
   "sheet": "4 Personal",
   "cell": "E19",
   "label": "Vertrieb",
   "col_label": 0.08,
-  "value": 0.2
+  "value": 0.2,
+  "section": "B) Personalkosten nach Kostenstelle (MEUR)"
  },
  {
   "sheet": "4 Personal",
   "cell": "B21",
   "label": "Trainingsmaßnahmen Fertigung gesamt (MEUR)",
   "col_label": null,
-  "value": 0.85
+  "value": 0.85,
+  "section": "B) Personalkosten nach Kostenstelle (MEUR)"
  },
  {
   "sheet": "4 Personal",
   "cell": "B25",
   "label": "Personalnebenkosten (% der Gehaltssumme)",
   "col_label": null,
-  "value": 0.4
+  "value": 0.4,
+  "section": "C) Sätze & Parameter"
  },
  {
   "sheet": "4 Personal",
   "cell": "B27",
   "label": "Pensionsrückstellung (% der Gehaltssumme)",
   "col_label": null,
-  "value": 0.05
+  "value": 0.05,
+  "section": "C) Sätze & Parameter"
  },
  {
   "sheet": "4 Personal",
   "cell": "B28",
   "label": "Kosten je Neueinstellung (EUR)",
   "col_label": null,
-  "value": 12500
+  "value": 12500,
+  "section": "C) Sätze & Parameter"
  },
  {
   "sheet": "4 Personal",
   "cell": "B29",
   "label": "Kosten je Entlassung (EUR)",
   "col_label": null,
-  "value": 10000
+  "value": 10000,
+  "section": "C) Sätze & Parameter"
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
   "cell": "B6",
   "label": "Kurzfristiger Kredit",
   "col_label": null,
-  "value": 27
+  "value": 27,
+  "section": "A) Kredite – Übersicht Periode 0"
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
   "cell": "C6",
   "label": "Kurzfristiger Kredit",
   "col_label": "Zinssatz Periode 0",
-  "value": 0.08
+  "value": 0.08,
+  "section": "A) Kredite – Übersicht Periode 0"
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
   "cell": "B7",
   "label": "Langfristiger Kredit",
   "col_label": null,
-  "value": 0
+  "value": 0,
+  "section": "A) Kredite – Übersicht Periode 0"
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
   "cell": "C7",
   "label": "Langfristiger Kredit",
   "col_label": 0.08,
-  "value": 0.07
+  "value": 0.07,
+  "section": "A) Kredite – Übersicht Periode 0"
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
   "cell": "B8",
   "label": "Überziehungskredit",
   "col_label": null,
-  "value": 0
+  "value": 0,
+  "section": "A) Kredite – Übersicht Periode 0"
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
   "cell": "C8",
   "label": "Überziehungskredit",
   "col_label": 0.07,
-  "value": 0.13
+  "value": 0.13,
+  "section": "A) Kredite – Übersicht Periode 0"
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
   "cell": "B25",
   "label": "Aktuelles Rating (Bonitätsstufe)",
   "col_label": null,
-  "value": "BBB"
+  "value": "BBB",
+  "section": "B) Referenz: Rating → Zinsänderung auf Basiszins der Folgeperiode"
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
   "cell": "B29",
   "label": "Bilanzsumme",
   "col_label": null,
-  "value": 72.15
+  "value": 72.15,
+  "section": "C) Bilanzkennzahlen (Basis für Rating & Wertorientierte Kennzahlen)"
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
   "cell": "C29",
   "label": "Bilanzsumme",
   "col_label": "Vorperiode (MEUR)",
-  "value": 80
+  "value": 80,
+  "section": "C) Bilanzkennzahlen (Basis für Rating & Wertorientierte Kennzahlen)"
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
   "cell": "B30",
   "label": "Eigenkapital",
   "col_label": null,
-  "value": 31.27
+  "value": 31.27,
+  "section": "C) Bilanzkennzahlen (Basis für Rating & Wertorientierte Kennzahlen)"
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
   "cell": "C30",
   "label": "Eigenkapital",
   "col_label": 80,
-  "value": 28
+  "value": 28,
+  "section": "C) Bilanzkennzahlen (Basis für Rating & Wertorientierte Kennzahlen)"
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
   "cell": "B31",
   "label": "Fremdkapital (Pensionsrückstellungen + Verbindlichkeiten)",
   "col_label": null,
-  "value": 40.87
+  "value": 40.87,
+  "section": "C) Bilanzkennzahlen (Basis für Rating & Wertorientierte Kennzahlen)"
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
   "cell": "C31",
   "label": "Fremdkapital (Pensionsrückstellungen + Verbindlichkeiten)",
   "col_label": 28,
-  "value": 52
+  "value": 52,
+  "section": "C) Bilanzkennzahlen (Basis für Rating & Wertorientierte Kennzahlen)"
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
   "cell": "B33",
   "label": "= Fremdkapitalquote",
   "col_label": null,
-  "value": 0.5665
+  "value": 0.5665,
+  "section": "C) Bilanzkennzahlen (Basis für Rating & Wertorientierte Kennzahlen)"
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
   "cell": "B37",
   "label": "Eigenkapitalrendite",
   "col_label": null,
-  "value": 0.1527
+  "value": 0.1527,
+  "section": "D) Wertorientierte Kennzahlen"
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
   "cell": "B38",
   "label": "Gewichteter Kapitalkostensatz (WACC)",
   "col_label": null,
-  "value": 0.0673
+  "value": 0.0673,
+  "section": "D) Wertorientierte Kennzahlen"
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
   "cell": "B39",
   "label": "Net Operating Profit after Tax (NOPAT)",
   "col_label": null,
-  "value": 5.46
+  "value": 5.46,
+  "section": "D) Wertorientierte Kennzahlen"
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
   "cell": "B40",
   "label": "Traditioneller Cashflow (CF)",
   "col_label": null,
-  "value": 13.3
+  "value": 13.3,
+  "section": "D) Wertorientierte Kennzahlen"
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
   "cell": "B41",
   "label": "Net Working Capital",
   "col_label": null,
-  "value": 43.94
+  "value": 43.94,
+  "section": "D) Wertorientierte Kennzahlen"
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
   "cell": "B42",
   "label": "Net Capital Employed (NCE)",
   "col_label": null,
-  "value": 71.29
+  "value": 71.29,
+  "section": "D) Wertorientierte Kennzahlen"
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
   "cell": "B49",
   "label": "Free Cashflow",
   "col_label": null,
-  "value": 14.35
+  "value": 14.35,
+  "section": "D) Wertorientierte Kennzahlen"
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
   "cell": "B53",
   "label": "Anzahl Aktien",
   "col_label": null,
-  "value": 500000
+  "value": 500000,
+  "section": "E) Aktienkurs, Unternehmenswert & Shareholder Earnings"
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
   "cell": "B54",
   "label": "Aktienkurs",
   "col_label": null,
-  "value": 196.91
+  "value": 196.91,
+  "section": "E) Aktienkurs, Unternehmenswert & Shareholder Earnings"
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
   "cell": "B56",
   "label": "Unternehmenswert (laut Bericht TNB17)",
   "col_label": null,
-  "value": 98.45
+  "value": 98.45,
+  "section": "E) Aktienkurs, Unternehmenswert & Shareholder Earnings"
  },
  {
   "sheet": "5 Kredite & Aktienkurs",
   "cell": "B58",
   "label": "Shareholder Earnings kumuliert",
   "col_label": null,
-  "value": 0
+  "value": 0,
+  "section": "E) Aktienkurs, Unternehmenswert & Shareholder Earnings"
  }
 ]'''
 
@@ -1706,19 +1922,24 @@ with tab_input:
         for sheet, st_tab in zip(sheets_order, sheet_tabs):
             with st_tab:
                 items = [m for m in meta if m["sheet"] == sheet]
-                cols = st.columns(2)
-                for i, m in enumerate(items):
-                    label = m["label"]
-                    if m.get("col_label"):
-                        label = f"{label} – {m['col_label']}"
-                    label = f"{label} [{m['cell']}]"
-                    cur = periods.get(selected, {}).get(sheet, {}).get(m["cell"], m["value"])
-                    with cols[i % 2]:
-                        if isinstance(m["value"], str):
-                            val = st.text_input(label, value=str(cur), key=f"{sheet}_{m['cell']}")
-                        else:
-                            val = st.number_input(label, value=float(cur), key=f"{sheet}_{m['cell']}", format="%.6g")
-                    new_overrides.setdefault(sheet, {})[m["cell"]] = val
+                sections = {}
+                for m in items:
+                    sections.setdefault(m.get("section") or sheet, []).append(m)
+                for sec_title, sec_items in sections.items():
+                    st.markdown(f"#### {sec_title}")
+                    cols = st.columns(2)
+                    for i, m in enumerate(sec_items):
+                        label = m["label"]
+                        if m.get("col_label"):
+                            label = f"{label} – {m['col_label']}"
+                        cur = periods.get(selected, {}).get(sheet, {}).get(m["cell"], m["value"])
+                        with cols[i % 2]:
+                            if isinstance(m["value"], str):
+                                val = st.text_input(label, value=str(cur), key=f"{sheet}_{m['cell']}")
+                            else:
+                                val = st.number_input(label, value=float(cur), key=f"{sheet}_{m['cell']}", format="%.6g")
+                        new_overrides.setdefault(sheet, {})[m["cell"]] = val
+                    st.divider()
         if st.button("💾 Periode speichern & neu berechnen", type="primary"):
             periods[selected] = new_overrides
             save_periods(periods)
